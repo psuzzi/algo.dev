@@ -1,0 +1,39 @@
+Executing solution
+#      3 |  sortLeftLHS(   -1)  t:        8 ms ->       2 | - a_example.txt             
+#  80000 |  sortLeftDict(   -1) t:    4,929 ms -> 205,338 | - b_lovely_landscapes.txt   
+#    750 |  sortLeftLHS(   -1)  t:       65 ms ->   1,546 | - c_memorable_moments.txt   
+#  60000 |  sortLeftLHS(   -1)  t:    8,583 ms -> 432,353 | - d_pet_pictures.txt        
+#  40000 |  sortLeftLHS(  500)  t:   12,223 ms -> 343,845 | - e_shiny_selfies.txt       
+ === total score:    983084 === 
+
+
+Executing solution
+#      3 |  sortLeftLHS(   -1)  t:        2 ms ->       2 | - a_example.txt             
+#  80000 |  sortLeftLHS(  400)  t:    7,944 ms ->   8,886 | - b_lovely_landscapes.txt   
+#    750 |  sortLeftLHS(   -1)  t:       60 ms ->   1,546 | - c_memorable_moments.txt   
+#  60000 |  sortLeftLHS(   -1)  t:    8,454 ms -> 432,353 | - d_pet_pictures.txt        
+#  40000 |  sortLeftLHS(  400)  t:    8,063 ms -> 337,838 | - e_shiny_selfies.txt       
+ === total score:    780625 === 
+Executing solution
+#      3 |  sortMidLHS(   -1)   t:        3 ms ->       1 | - a_example.txt             
+#  80000 |  sortMidLHS(  400)   t:    7,957 ms ->   7,056 | - b_lovely_landscapes.txt   
+#    750 |  sortMidLHS(   -1)   t:       67 ms ->   1,404 | - c_memorable_moments.txt   
+#  60000 |  sortMidLHS(   -1)   t:    9,004 ms -> 432,619 | - d_pet_pictures.txt        
+#  40000 |  sortMidLHS(  400)   t:    7,802 ms -> 336,780 | - e_shiny_selfies.txt       
+ === total score:    777860 === 
+Executing solution
+#      3 |  sortLeftDict(   -1) t:        2 ms ->       2 | - a_example.txt             
+#  80000 |  sortLeftDict(   -1) t:    5,681 ms -> 205,338 | - b_lovely_landscapes.txt   
+#    750 |  sortLeftDict(   -1) t:       33 ms ->   1,433 | - c_memorable_moments.txt   
+#  60000 |  sortLeftDict(   10) t:   39,653 ms -> 386,682 | - d_pet_pictures.txt        
+#  40000 |  sortLeftDict(   80) t:    6,713 ms -> 324,354 | - e_shiny_selfies.txt       
+ === total score:    917809 === 
+Executing solution
+#      3 |  sortLeftBForce(   -1) t:        2 ms ->       2 | - a_example.txt             
+#  80000 |  sortLeftBForce(  500) t:    9,557 ms ->   8,703 | - b_lovely_landscapes.txt   
+#    750 |  sortLeftBForce(   -1) t:       48 ms ->   1,410 | - c_memorable_moments.txt   
+#  60000 |  sortLeftBForce(   -1) t:    6,692 ms -> 432,308 | - d_pet_pictures.txt        
+#  40000 |  sortLeftBForce(  500) t:    9,764 ms -> 342,526 | - e_shiny_selfies.txt       
+ === total score:    784949 === 
+
+

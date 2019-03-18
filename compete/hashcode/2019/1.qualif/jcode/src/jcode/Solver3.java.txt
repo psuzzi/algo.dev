@@ -1,0 +1,234 @@
+package jcode;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * Solver class responsible to get the input, and transform it into output
+ */
+public class Solver3 {
+	
+	Output out;
+	Input in;
+	
+	List<Photo> vPhotos;
+	
+	List<Slide> hSlides;
+	List<Slide> vSlides;
+	
+	void clear() {
+		vPhotos = new ArrayList<>();
+		
+		hSlides = new ArrayList<>();
+		vSlides = new ArrayList<>();
+	}
+	
+	/** Solve the input and return the output */
+	public Output solve(Input in) {
+		out = new Output();
+		out.in = in;
+		clear();
+		
+		// store h slides 
+		for(Photo p : in.photos) {
+			if(p.isH) {
+				hSlides.add(new Slide(p));
+			} else {
+				vPhotos.add(p);
+			}
+		}
+		
+		if(!vSlides.isEmpty()) {			
+//			composeVSlides0(); // simple sequence
+			composeVSlidesMinCommonTags();
+		}
+		
+		
+		// put slides in sequence
+		
+		// sort slides: maximize scoring
+//		putSlideInSequence0(); // simple sequence
+		putSlideInSequence1(); // maximize score 1
+		
+		return out;
+	}
+	
+	private void putSlideInSequence0() {
+		out.slides.addAll(hSlides);
+		out.slides.addAll(vSlides);
+	}
+	
+	private void putSlideInSequence1() {
+		List<Slide> slides = new ArrayList<>();
+		Map<String, Set<Slide>> map = new HashMap<>();
+		Map<Slide, Integer> imap = new HashMap<>();
+		
+		Slide s;
+		int hsize = hSlides.size(), vsize = vSlides.size();
+		for(int i=0; i<hsize+vsize; i++) {
+			s = (i<hsize) ? hSlides.get(i) : vSlides.get(i-hsize);
+			for(String tag : s.tags) {
+				if(!map.containsKey(tag)) {
+					map.put(tag, new HashSet<>());
+				}
+				map.get(tag).add(s);
+			}
+			imap.put(s, i);
+			slides.add(s);
+		}
+		
+		int size = slides.size();
+		Slide curr, next, maxScoreSlide;
+		int score, maxScore;
+		String tag;
+		Set<Slide> nextCandidates = new HashSet<Slide>();
+		// - loop all slides
+		for(int i=0; i<size-1; i++) {
+			curr = slides.get(i);
+			next = maxScoreSlide = slides.get(i+1);
+			score = maxScore = score(curr.tags, next.tags);
+			nextCandidates.clear();
+			// for each tag in current
+			for(int j=0; j<curr.atags.length && maxScore < curr.atags.length-1 ; j++) {
+				
+				// get a collection of candidate slides which can have higher score
+				tag = curr.atags[j];
+				Iterator<Slide> kiter = map.get(tag).iterator();
+				int k = 0;
+				while(kiter.hasNext() && k<600 ) {
+					k++;
+					Slide sp = kiter.next();
+					// if the slide was not yet scored against this
+					if(maxScore < sp.atags.length-1 && imap.get(sp)>i && !nextCandidates.contains(sp)) {
+						nextCandidates.add(sp);
+						score = score(curr.tags, sp.tags);
+						if(score>maxScore) {
+							maxScore = score;
+							maxScoreSlide = sp;
+						}
+					}
+				}
+				
+			}
+			if(maxScoreSlide!=next) {
+				// swap and update indices
+				int iNext = imap.get(next);
+				int iMax = imap.get(maxScoreSlide);
+				Collections.swap(slides, iNext, iMax);
+				imap.put(maxScoreSlide, iNext);
+				imap.put(next, iMax);
+			}
+		}
+		out.slides = slides;
+	}
+	
+	int score(Set<String> prevTags, Set<String> currTags) {
+		int first=0, common=0, second=0;
+		for(String tag1: prevTags) {
+			if(currTags.contains(tag1)) {
+				common ++;
+			} else {
+				first++;
+			}
+		}
+		second = currTags.size() - common;
+		int value = Math.min(common, Math.min(first, second));
+		return value;
+	}
+
+	private List<Slide> putHVSlidesInSequence() {
+		Slide s;
+		List<Slide> slides = new ArrayList<>();
+		Map<String, Set<Slide>> map = new HashMap<>();
+		Map<Slide, Integer> imap = new HashMap<>();
+		int hsize = hSlides.size(), vsize = vSlides.size();
+		for(int i=0; i<hsize+vsize; i++) {
+			s = (i<hsize) ? hSlides.get(i) : vSlides.get(i-hsize);
+			for(String tag : s.tags) {
+				if(!map.containsKey(tag)) {
+					map.put(tag, new HashSet<>());
+				}
+				map.get(tag).add(s);
+			}
+			imap.put(s, i);
+			slides.add(s);
+		}
+		return slides;
+	}
+
+	/** compose v slides: pair of photos with min number of common tags */
+	void composeVSlidesMinCommonTags() {
+		Photo p1, p2;
+		boolean used [] = new boolean[vPhotos.size()];// 
+		for(int i=0; !used[i] && i<vPhotos.size()-1; i++) {
+			p1 = vPhotos.get(i);
+			Slide vSlide = new Slide(p1);
+			int bestCommon = Integer.MAX_VALUE;
+			int bestP2 = -1;
+			for(int j=1; !used[j] && j<vPhotos.size(); j++) {
+				p2 = vPhotos.get(j);
+				// find the slice with no common
+				int common = commonTags(p1.tags, p2.tags);
+				if(common<bestCommon) {
+					bestCommon = common;
+					bestP2 = j;
+				}
+				if(bestCommon==0) {
+					// cannot get any better
+					break;
+				}
+			}
+			// compose slide
+			vSlide.addP2(vPhotos.get(bestP2));
+			vSlides.add(vSlide);
+			used[i] = used[bestP2] = true;
+		}
+	}
+	
+	private int commonTags(Set<String> tags1, Set<String> tags2) {
+		int count = 0;
+		for(String tag : tags1) {
+			if(tags2.contains(tag)) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	/** Simple composition of vertical slides */
+	private void composeVSlides0() {
+		if(vPhotos.isEmpty())
+			return;
+		
+		vPhotos.sort((p1, p2) -> {
+			return p1.tags.size() - p2.tags.size();
+		});
+		
+		Photo prev, curr;
+		
+		
+//		int sz = vPhotos.size();
+//		for(int i=0; i<vPhotos.size()/2; i++) {
+//			prev = vPhotos.get(i);
+//			curr = vPhotos.get(sz-1-i);
+//			vSlides.add(new Slide(prev, curr));
+//		}
+		
+		for(int i=1; i<vPhotos.size(); i++) {
+			if(i%2==0) {
+				prev = vPhotos.get(i-1);
+				curr = vPhotos.get(i);
+				vSlides.add(new Slide(prev, curr));
+			}
+		}
+		
+	}
+	
+
+}
