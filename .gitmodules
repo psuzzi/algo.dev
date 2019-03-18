@@ -1,0 +1,6 @@
+[submodule "compete/hashcode/hashcode"]
+	path = compete/hashcode/hashcode
+	url = https://github.com/sharifmarat/hashcode.git
+[submodule "compete/hashcode/ish/hashcode"]
+	path = compete/hashcode/ish/hashcode
+	url = https://github.com/sharifmarat/hashcode.git
