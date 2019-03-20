@@ -1,0 +1,118 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+VERSION:2.0
+X-WR-CALNAME:TECHTalk
+METHOD:PUBLISH
+PRODID:-//Apple Inc.//Mac OS X 10.14.3//EN
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+DTSTART:19810329T020000
+TZNAME:CEST
+TZOFFSETTO:+0200
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+DTSTART:19961027T030000
+TZNAME:CET
+TZOFFSETTO:+0100
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Berlin:20190315T153000
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+ORGANIZER;CN="Alexander Rimer":mailto:rimer@itemis.de
+UID:2mo0pom9jrhledi41r0quthc5v_R20190301T133000@google.com
+DTSTAMP:20190314T110532Z
+LOCATION:Stuttgart\, Deutschland\, Stuttgart-Etage-Besprechungsraum Groß
+  (20)
+DESCRIPTION:<br><br><b>TECHTalk</b><br><br><br>The focus should be on <b
+ >demoing/presenting </b>some <b>technology/implementation/technical real
+ ization/technical ideas</b><ul><li>You have a cool new feature implement
+ ed? Show it!</li><li>You plan to build something amazing? Discuss it and
+  gather usefull feedback!</li><li>You found a new technical appraoch tha
+ t could change the way we work? Share your expirience!</li><li>The scope
+  does not need to be MPS. Every interesting technology fits in!</li><li>
+ No presentation slides required\, just give a demo and explain your idea
+ s.</li><li>You have 10 - 15 minutes time</li><li>All colleagues (local a
+ nd remote) are welcome!</li><li>The <b>TECHTalk</b> could take place eve
+ ry 2x weeks</li></ul>\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nDiesen Abschnitt der Beschreib
+ ung nicht bearbeiten.\n\nDieser Termin enthält einen Videoanruf.\nTeilne
+ hmen: https://meet.google.com/pud-memd-dub\n+1 413-341-6027 PIN: 7762313
+ 71#\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~::~:~::-
+STATUS:CONFIRMED
+SEQUENCE:0
+RECURRENCE-ID;TZID=Europe/Berlin:20190315T143000
+SUMMARY:TECHTalk
+LAST-MODIFIED:20190314T110532Z
+DTSTART;TZID=Europe/Berlin:20190315T143000
+CREATED:20190207T133422Z
+ATTENDEE;CUTYPE=RESOURCE;PARTSTAT=ACCEPTED;ROLE=REQ-PARTICIPANT;X-NUM-GU
+ ESTS=0:mailto:itemis.de_2d38303939333530333836@resource.calendar.google.
+ com
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=DECLINED;ROLE=REQ-PARTICIPANT;X-NUM-
+ GUESTS=0:mailto:sergej@koscejev.cz
+ATTENDEE;CN="Alexander Rimer";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=R
+ EQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:rimer@itemis.de
+ATTENDEE;CN="Andreas Graf";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=
+ REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:graf@itemis.de
+ATTENDEE;CN="Bernd Kolb";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=RE
+ Q-PARTICIPANT;X-NUM-GUESTS=0:mailto:kolb@itemis.de
+ATTENDEE;CN="Dirk Leopold";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-
+ PARTICIPANT;X-NUM-GUESTS=0:mailto:leopold@itemis.de
+ATTENDEE;CN="Joao Silveira";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ
+ -PARTICIPANT;X-NUM-GUESTS=0:mailto:silveira@itemis.de
+ATTENDEE;CN="Klaus Birken";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-
+ PARTICIPANT;X-NUM-GUESTS=0:mailto:klaus.birken@itemis.de
+ATTENDEE;CN="Stephan Eberle";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROL
+ E=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:eberle@itemis.de
+ATTENDEE;CN="Tamas Szabo";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-P
+ ARTICIPANT;X-NUM-GUESTS=0:mailto:tamas.szabo@itemis.de
+ATTENDEE;CN="Till Fischer";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=
+ REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:till.fischer@itemis.de
+ATTENDEE;CN="Wladimir Safonov";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=
+ REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:safonov@itemis.de
+ATTENDEE;CN="a.adavani@itemis.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTI
+ ON;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:a.adavani@itemis.com
+ATTENDEE;CN="aquapp@itemis.com";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE
+ =REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:aquapp@itemis.com
+ATTENDEE;CN="bengelmann@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;R
+ OLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:bengelmann@itemis.de
+ATTENDEE;CN="dummann@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;
+ ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:dummann@itemis.de
+ATTENDEE;CN="fhornbogen@itemis.com";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;
+ ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:fhornbogen@itemis.com
+ATTENDEE;CN="hbaechmann@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTI
+ ON;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:hbaechmann@itemis.de
+ATTENDEE;CN="knarasimhan@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;
+ ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:knarasimhan@itemis.de
+ATTENDEE;CN="lhartl@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=
+ REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:lisa.hartl@itemis.de
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;X-
+ NUM-GUESTS=0:mailto:lisson@itemis.de
+ATTENDEE;CN="markusvoelter@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-A
+ CTION;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:markusvoelter@itemis.de
+ATTENDEE;CN="mlanghammer@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACT
+ ION;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:michael.langhammer@itemis
+ .de
+ATTENDEE;CN="pgowda@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;R
+ OLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:pgowda@itemis.de
+ATTENDEE;CN="standup-s@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTIO
+ N;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:standup-s@itemis.de
+ATTENDEE;CN="tgoerg@itemis.de";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=
+ REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:tgoerg@itemis.de
+BEGIN:VALARM
+X-WR-ALARMUID:DACC75DF-949C-4E80-81CF-75BE69ED7AFD
+UID:DACC75DF-949C-4E80-81CF-75BE69ED7AFD
+TRIGGER:-PT10M
+DESCRIPTION:This is an event reminder
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
