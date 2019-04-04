@@ -1,0 +1,35 @@
+= theoretical questions 
+ 
+== time and space complexity of algorithms
+
+== how does the data from my browser get to destination
+
+== explain tcp/ip
+
+TCP/IP (Transmission Control Protocol / Internet Protocol) specifies how the data is exchanged over internet by providing end-to-end communications  
+
+
+Online data needs to know where is going
+
+Layers: 
+- Application: different protocols use different ports. example: http uses port 80 
+- Transport: TCP split the data in packets, that individually get the quickest route toward the destination. Each packet has an header to tell in which order the packets have to be reassembled.
+- Internet: uses IP to attach origin and destination addresses, so the packet knows where comes from and where it has to go.
+- Network: handle mac addressing, and bits
+
+
+== tcp-ip vs udp
+
+== how to optimize SQL queries
+
+== what is an atomic transaction
+
+== does an atomic transaction makes sense on single-threaded program
+
+== difference between symmetric and public key cryptography
+
+== what is an hash function
+
+== which hash functions do you know
+
+== what is a diffie-hellman exchange.

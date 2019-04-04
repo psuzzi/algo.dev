@@ -1,0 +1,18 @@
+= Number of repeated digits
+
+We can calculate the number of numbers without repeated digits as permutations.
+Then, we get the number of numbers with repreated digits by subtraction. 
+
+example, free digits are marked with *
+
+n=30 -> 3
+non-rep(*) = 9
+non-rep(1*, 2*) = 9+9 = 18
+30 - 27 = 3;
+
+n=1234
+nr(*) = 9
+nr(**) = 9
+nr(***) = 9
+nr(123*) = 9
+nr(1***) = 9
