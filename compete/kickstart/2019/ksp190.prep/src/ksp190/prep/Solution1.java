@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @see https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051060/00000000000588f4
  *
  */
-public class Solution {
+public class Solution1 {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
