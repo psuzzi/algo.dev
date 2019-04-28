@@ -44,7 +44,7 @@ public class SolutionB1 {
 			// all zeroes at zero index
 			prefixsums.add(new Integer[26]);
 			// compute the prefix sums
-			for(char c)
+//			for(char c)
 			
 		}
 
