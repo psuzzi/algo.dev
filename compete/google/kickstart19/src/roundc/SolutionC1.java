@@ -5,9 +5,40 @@ import java.io.*;
 
 public class SolutionC1 {
 	
-	private static String solve(int n, int r, int c, int sr, int sc, char[] inst) {
-		String desc = String.format("n:%s, r:%s, c:%s, sr:%s, sc:%s, inst:%s", n, r, c, sr, sc, Arrays.toString(inst));
-		return desc;
+	private static final String solve(int n, int r, int c, int sr, int sc, char[] inst) {
+		
+		int cr = sr-1, cc = sc-1;//curr r and c
+		Set<String> visited = new HashSet<>();
+		
+		for( char in : inst) {
+			visited.add(cr+"-"+cc);
+			//System.out.printf("curr: [cr:%s][cc:%s], in:%s %n", cr, cc, in);
+			if(in == 'N') {
+				cr--;
+				while(visited.contains(cr+"-"+cc)) {
+					cr--;
+				}
+			}
+			else if(in == 'S') {
+				cr++;
+				while(visited.contains(cr+"-"+cc)) {
+					cr++;
+				}
+			}
+			else if(in == 'E') {
+				cc++;
+				while(visited.contains(cr+"-"+cc)) {
+					cc++;
+				}
+			}
+			else if(in == 'W') {
+				cc--;
+				while(visited.contains(cr+"-"+cc)) {
+					cc--;
+				}
+			}
+		}
+		return (cr+1) + " " + (cc+1);
 	}
 	
 	public static void main(String[] args) {
