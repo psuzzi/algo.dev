@@ -1,11 +1,14 @@
-import java.util.*;
-import java.util.function.Consumer;
-import java.io.*;
+package round1c;
 
-public class Solution {
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.function.Consumer;
+
+public class Solution1C2 {
 	public static void main(String[] args) {
 		// Scanner in = new Scanner(System.in);
-		scan("input/input.txt", in -> {
+		scan("input/round1c/input2.txt", in -> {
 			int t = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
 			for (int i = 1; i <= t; ++i) {
 				int n = in.nextInt();
