@@ -1,0 +1,28 @@
+they think P (A,B]
+A < P <= B
+
+I have N tries to guess P
+
+interactive
+
+read line> T number of test cases
+
+for each Ti
+read line> A B
+read line> N
+
+start exchange > Q : my guess
+read line < CORRECT|TOO_SMALL|TOO_BIG|WRONG_ANSWER
+
+
+Limits
+1 ≤ T ≤ 20.
+A = 0. N = 30.
+Time limit: 10 seconds per test set.
+Memory limit: 1GB.
+
+Test set 1 (Visible)
+B = 30.
+
+Test set 2 (Hidden)
+B = 10^9.

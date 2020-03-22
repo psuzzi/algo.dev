@@ -1,0 +1,33 @@
+Problem
+
+N parties a b ... e
+5         1 2     5
+
+exit : max 2
+no > 1/2 senators of one party
+
+in 
+line> T tests
+
+each case
+line> N of parties
+line> P1 P2 ... Pn number of senators
+
+out
+for each test case
+line>#x:y #test-case:evac-plan> cpace separated list of one or two chars in order
+
+Limits
+1 ≤ T ≤ 50.
+No party will have an absolute majority before the start of the evacuation.
+1 ≤ Pi ≤ 1000, for all i.
+Time limit: 30 seconds per test set.
+Memory limit: 1GB.
+
+Test set 1 (Visible)
+2 ≤ N ≤ 3.
+sum of all Pi ≤ 9.
+
+Test set 2 (Hidden)
+2 ≤ N ≤ 26.
+sum of all Pi ≤ 1000.
