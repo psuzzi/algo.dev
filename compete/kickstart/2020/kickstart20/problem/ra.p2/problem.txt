@@ -1,0 +1,7 @@
+N stacks K plates : beauty
+
+exactly P
+
+one P >> all pstack
+
+maximize total beauty
