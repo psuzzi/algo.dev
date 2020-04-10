@@ -1,0 +1,14 @@
+= Study 1
+
+== Follows
+
+https://yangshun.github.io/tech-interview-handbook/best-practice-questions
+
+
+
+
+== Alternatives
+
+- https://medium.com/@nick.ciubotariu/ace-the-coding-interview-every-time-d169ce1fd3fc
+- https://www.algoexpert.io/purchase
+- https://leetcode.com/accounts/login/
