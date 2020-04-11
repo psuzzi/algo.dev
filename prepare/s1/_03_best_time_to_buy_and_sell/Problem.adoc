@@ -1,0 +1,53 @@
+= Best time to buy and sell stock
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+given an array, the i-th element is the price of a stock on day i
+
+You can only complete a buy/sell transaction, and you cannot sell before buying a stock.
+
+Design the algorithm to find the maximum profit.
+
+== Examples
+
+Input: [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 1 (price=1) and sell on day 5 (price = 6). The profit is 5
+
+Input: [7,6,4,3,1]
+Output: 0
+Explanation: no transaction done. Profit = 0.
+
+== Algo
+
+== Brute force
+
+A naive solution would be to compute the profit for each pair of values and return the maximum value.
+
+----
+max = 0
+for i = 0 to len-1
+  for j = i to len
+    gain = price[j]-price[i]
+    if gain > max
+        max = gain
+----
+
+time/space complexity: O(n^2)/O(1)
+
+== One pass / Kadane's variation
+
+Since we need to maximize a function on a contiguos subarray of the input, we could see this as a variation of Kadane's algorithm. 
+
+In our case, the function to maximize is the delta = prices[i]-prices[i-1]
+
+----
+max_curr=0, max_global=0
+for i = 1 to prices.len-1
+    delta = prices[i]-prices[i-1]
+    max_curr = max( 0, max_curr + delta )
+    max_global = max( max_curr, max_global )
+----
+
+time/space complexity: O(n)/O(1)
+
