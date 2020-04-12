@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ $1 = "py" ]; then
+    python3 ../_00_exec/Runner.py isAnagram anagram nagaram
+fi

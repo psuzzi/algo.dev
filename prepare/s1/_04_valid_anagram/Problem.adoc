@@ -1,0 +1,24 @@
+= Valid anagram
+
+Given two strings s and t determine if t is a valid anagram of s
+
+
+https://leetcode.com/problems/valid-anagram/
+
+== Counting letters
+
+We can count the occurrences of each character of s, and then verify the same letters are used in t
+
+----
+count = new int[26]
+for i=0 to len(s)
+    index = index(s[i])
+    count[i] ++
+for i=0 to len(t)
+    index = index(t[i])
+    count[i] --
+for i=0 to len()
+----
+
+time/space complexity: O(n)/O(1)
+
