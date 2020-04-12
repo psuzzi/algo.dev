@@ -1,0 +1,40 @@
+= Valid anagram
+
+Given a string containing just parentheses '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+Valid means: 
+- open brackets must be closed by the same type of brackets
+- open brackets must be closed in the correct order
+
+
+https://leetcode.com/problems/valid-parentheses/
+
+== Using a stack 
+
+A natural solution is using a stack to keep the parentheses encountered so far. 
+For each new open parenthesis, we add it to the stack. 
+
+For each closing parentheses, if matches the last on top of the stack or is invalid. When matches, we remove the corresponding opening one.
+
+When we read all the parentheses, if the stack is empty, it's a valid solution
+
+
+----
+stack = []
+for char c in s
+    if c == '(' or c == '[' or c=='{'
+        stack.push( c )
+    else {
+        if stack.size = 0
+            return false
+        op = stack.pop()
+        if not ( op == '(' and c == ')' or 
+                 op == '[' and c == ']' or 
+                 op == '{' and c == '}' )
+            return false
+    }
+return stack.size == 0
+----
+
+time/space complexity: O(n)/O(1)
+
