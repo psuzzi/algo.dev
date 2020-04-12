@@ -5,7 +5,8 @@
 https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 
 
-curr: [Study 1](prepare/s1/README.adoc)
+curr: link:prepare/s1/README.adoc[Study 1]
+
 == Alternatives
 
 - https://medium.com/@nick.ciubotariu/ace-the-coding-interview-every-time-d169ce1fd3fc
