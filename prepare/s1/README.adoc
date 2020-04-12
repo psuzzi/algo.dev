@@ -4,8 +4,12 @@
 
 https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 
+Exercises:
 
-curr: link:prepare/s1/README.adoc[Study 1]
+- link:_01-two-sum/Problem.adoc[Two Sum]
+- link:_02_linked_list_cycle/Problem.adoc[Cycle in a LL]
+- link:_03_best_time_to_buy_and_sell/Problem.adoc[Best time to buy and sell]
+- link:_04_valid_anagram/Problem.adoc[Valid anagram]
 
 == Alternatives
 
