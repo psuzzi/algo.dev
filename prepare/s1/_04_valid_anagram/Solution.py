@@ -1,20 +1,5 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        occ = {}
-        i=j=k=0
-        for i in s:
-            if i not in occ:occ[i]=1
-            else:
-                occ[i]+=1
-        for j in t:
-            if j not in occ:return False
-            else:
-                occ[j]-=1
-        for k in occ:
-            if occ[k]>0:return False
-        return True
-
-    def isAnagram1(self, s: str, t: str) -> bool:
         dic1, dic2 = {}, {}
         for c in s:
             dic1[c] = dic1.get(c,0) +1
