@@ -1,4 +1,0 @@
-= Study 1 - problems
-
-- two sum: in a list, find two numbers which add up to a given target
-- linked list cycle: Floyd's cycle finding, linear 

@@ -1,0 +1,61 @@
+= Product of an Array except self
+
+Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+
+eaxmple
+
+----
+Input:  [1,2,3,4]
+Output: [24,12,8,6]
+----
+
+Constraint: It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array) fits in a 32 bit integer.
+
+Note: Please solve it without division and in O(n).
+
+Follow up:
+Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)
+
+https://leetcode.com/problems/product-of-array-except-self/
+
+== Brute force
+
+We cannot use a brute force approach as its complexity would be O(n^2)
+
+----
+ans = [1] * nums.len
+for i=0 to nums.len
+    for j=0 to nums.len
+        if(i!=j)
+            ans[i] *= nums[j]
+----
+
+== Multi pass
+
+For an O(n) solution, we could observe some properties of the result, and then compute it in multiple passes.
+
+Example: with the input [1, 2, 3, 4], the answer is [24, 12, 8, 6]
+
+Let's explode the multiplications on several lines, where in each line the excluded element is in square brackets.
+With each line, we obtain one of the elements of the result. Plus, we observe each element consists in multiplying a left part (or 1) with a right part (or 1) 
+
+                            L                R
+ [1]   2    3    4   -->   (1)          *    2 * 3 * 4
+  1   [2]   3    4   -->    1           *    3 * 4
+  1    2   [3]   4   -->    1 * 2       *    4
+  1    2    3   [4]  -->    1 * 2 * 3   *   (1)
+
+With three O(n) pass we can build an array with the left parts, an array with the right parts, and the result array
+
+----
+l = r = ans [1] * nums.len
+for i=1 to nums.len - 1
+    l[i] = l[i-1] * nums[i-1]
+for i=nums.len-1 to 0
+    r[i] = r[i+1] * nums[i+1]
+for i=1 to nums.len - 1
+    ans[i] = l[i] * r[i]
+----
+
+time/space complexity: O(n)/O(n)
+

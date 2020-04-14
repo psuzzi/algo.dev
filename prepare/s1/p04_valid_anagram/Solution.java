@@ -1,3 +1,5 @@
+package prepare.s1._04_valid_anagram;
+
 class Solution {
     public boolean isAnagram(String s, String t) {
         int[] count = new int[26];
