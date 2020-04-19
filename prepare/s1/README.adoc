@@ -1,4 +1,4 @@
-= Study 1
+= Algorithms Study 1
 
 == Follows
 
