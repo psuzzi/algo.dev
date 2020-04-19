@@ -1,0 +1,48 @@
+= Group anagrams
+
+Given an array of strings, group anagrams together.
+
+Example: 
+
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+Output:
+[
+  ["ate","eat","tea"],
+  ["nat","tan"],
+  ["bat"]
+]
+
+https://leetcode.com/problems/group-anagrams/
+
+
+
+== Solution - categorize by sorted string
+
+Two strings belong to the same group only if their sorted anagrams are the same. 
+
+----
+map = []
+for s in strings
+    key, val = sorted(s), s
+    if not map[key]
+        map[key] = new list
+    map[key] = val
+return map.values
+----
+
+== Solution - categorize by count
+
+We can categorize te 
+
+----
+map = []
+for s in strings
+    count = char[26]
+    for char c in s.chars
+        count[ c-'a' ]++
+    
+----
+
+== Impl
+
+See implementation in link:Solution.java[Java]
