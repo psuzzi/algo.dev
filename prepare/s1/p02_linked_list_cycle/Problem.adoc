@@ -25,6 +25,33 @@ In a linked list with no cycles, you can scan all the list and reach the last el
 With Floyd's cycle-finding algorithm, if there is no loop, the scan reaches the end. If there is a loop, the slow and the fast pointer meet at a certain point in the iteration. 
 Such meeting, in a linked list X, happens at the smallest i (number of steps) such that X_i = X_2i
 
+== Algorithm
+
+Assuming this is a node of a singly linked list.
+
+----
+ListNode
+    val
+    next
+----
+
+The algorithm is
+
+----
+slow = fast = head
+while fast != null and fast.next != null:
+    slow = slow.next
+    fast = fast.next.next
+    if slow == fast:
+        return true
+# LL end
+return true
+----
+            
+
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 
 
 == References
 

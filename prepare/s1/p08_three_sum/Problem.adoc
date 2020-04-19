@@ -39,3 +39,6 @@ for i=0 to num.len-2
                 hi--
 ----
 
+== Impl
+
+See implementation in link:Solution.java[Java]

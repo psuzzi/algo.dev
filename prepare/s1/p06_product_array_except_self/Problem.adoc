@@ -59,3 +59,6 @@ for i=1 to nums.len - 1
 
 time/space complexity: O(n)/O(n)
 
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 

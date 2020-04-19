@@ -51,3 +51,6 @@ for i = 1 to prices.len-1
 
 time/space complexity: O(n)/O(1)
 
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 

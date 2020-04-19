@@ -47,3 +47,8 @@ Scan all the n_i in numbers
   Ht put (k=n_i, v=i) 
 
   time O(n) space O(n)
+
+
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 

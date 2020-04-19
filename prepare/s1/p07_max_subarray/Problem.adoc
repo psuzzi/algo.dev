@@ -27,3 +27,6 @@ for i = 1 to nums.len-1
     glob_max = max( cur_max, glob_max )
 ----
 
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 

@@ -38,3 +38,6 @@ return stack.size == 0
 
 time/space complexity: O(n)/O(1)
 
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 
