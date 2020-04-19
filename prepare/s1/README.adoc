@@ -12,6 +12,10 @@ Exercises:
 - link:p04_valid_anagram/Problem.adoc[Validate anagram] by counting letters
 - link:p05_valid_parentheses/Problem.adoc[Validate parentheses] with stack
 - link:p06_product_array_except_self/Problem.adoc[Product of arrays except self]
+- link:p07_max_subarray/Problem.adoc[subarray with largest sum] with kadane
+- link:p08_three_sum/Problem.adoc[find three numbers which add up to given sum] in ~ O(n^2)
+
+
 
 == Alternatives
 
