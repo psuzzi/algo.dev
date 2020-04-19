@@ -4,7 +4,7 @@
 
 https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 
-Exercises:
+=== Exercises on Sequences:
 
 - link:p01-two-sum/Problem.adoc[Two Sum]
 - link:p02_linked_list_cycle/Problem.adoc[Cycle in a LL] with Floyd's cycle-finding
@@ -14,6 +14,8 @@ Exercises:
 - link:p06_product_array_except_self/Problem.adoc[Product of arrays except self]
 - link:p07_max_subarray/Problem.adoc[subarray with largest sum] with kadane
 - link:p08_three_sum/Problem.adoc[find three numbers which add up to given sum] in ~ O(n^2)
+- link:p09_merge_intervals/Problem.adoc[merge overlapping intervals] by sorting for starting time
+- link:p10_group_anagrams/Problem.adoc[group anagrams together] categorize by string / count
 
 
 
