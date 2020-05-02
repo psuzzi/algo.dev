@@ -1,0 +1,42 @@
+= CJ2020 R1C P2 - Overrandomized
+
+Given a large set of strings representing random numbers sent by a server, derive a 10-characters string that represents the map used by the server for converting numbers to their string representation.
+
+Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4[CodeJam 20, round 1C, Problem 2]
+
+
+== Solution - Benford's law 
+
+The idea is considering the https://en.wikipedia.org/wiki/Benford%27s_law[Benford's law], which observes the frequency distribution of leading digits for random numbers spanning on different orders of magnitude. 
+
+According to the law, in leading digits, the frequency of "1" is higher than "2", and so on.. until the digit "9", whichi is the less frequent. 
+
+With this in mind, we can write an algorithm to count the frequencies of leading digits. With such frequencies we can map the numbers between 1 and 9. 
+At this point, since there are only 10 characters in the representational alphabet, the number 0 is represented by the only digit which is not in the leading-digit-frequency map.
+
+
+----
+map<char, int> frequencies
+set<char> alphabet
+for i=1 to 10'000
+    ri = R[i]
+    r0 = ri[0]
+    // count frequencies of leading digit
+    if not frequencies.contains(r0)
+        frequencies[r0] = 1
+    else
+        frequencies[r0] = frequencies[r0] + 1 // increment count
+    // extract the alphabet
+    if alphabet.size < 10 
+        alphabet.addall( ri.characters )
+
+result = []
+// "0" is represented by the char not in the freq. map
+result.add( frequencies.keys - alphabet.values )
+// add the remaining keys, sorted by descending value
+result.addall( frequencies.sort(by-value-desc).keys )  
+----
+
+== Impl
+
+See implementation in link:Solution.java[Java]
