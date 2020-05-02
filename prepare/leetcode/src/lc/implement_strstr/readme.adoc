@@ -1,0 +1,29 @@
+# Implement Strstr
+
+Given a string s and a pattern p, find the start index if there is a match or return -1.
+
+see also:  https://leetcode.com/problems/implement-strstr/
+
+## Solution
+
+This exercise is about pattern matching.
+
+### Simple Solution: Two pointers
+
+Scan all the chars in the input string with an index "i". When finding a character matching the first char of the pattern, use a second pointer "j" to check for a full match. In case there is no full match, backtrack the "i" index 
+
+----
+j=0
+for i=0 to s.len
+	if s[i] == p[j]
+		if j == p.len-1
+			return i-j #start index
+		else
+			j++
+	else
+		i-=j # backtrack
+		j=0;
+return -1
+----	
+
+
