@@ -35,5 +35,10 @@ return result;
 
 == Impl
 
-See implementation in link:Solution.java[Java]
+See my implementation in link:Solution.java[Java]
+
+See also
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/UmFmYmlsbA[Rafbil] (#1) impl in C++14
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/Q2htZWwuVG9sc3RpeQ[Chmel.Tolstiy] (#9) impl in Python 3
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/aWFrb3ZsZXYuemFraGFy[iakovlev.zakhar] (#14) impl in Java 8
 
