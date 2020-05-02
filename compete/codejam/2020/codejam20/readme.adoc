@@ -1,0 +1,11 @@
+= Codejam 2020
+
+* Qualification
+* Rouund 1A
+* Round 1B
+* Round 1C
+** link:src/codejam20/comp/r1c1[R1C P1 - Overexcited Fan] : Manhattan distance
+** link:src/codejam20/comp/r1c2[R1C P2 - Overrandomized] : Benford's law
+
+
+https://codingcompetitions.withgoogle.com/codejam/archive/2020[Google Codejam 2020 Archive]
