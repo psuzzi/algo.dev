@@ -2,14 +2,16 @@
 
 A celebrity is moving in a 2D discrete world. It starts from (x,y) and for each time unit moves in one of the four cardinal direction. Its path is given in form "NSSWEEE...". You start from (0,0) and for each time unit, you can move one block or stay still.
 
-Determine if you can reach the celebrity along its path and, if so, which is the minimum time you need .
+Determine if you can meet the celebrity along its path and, if so, which is the minimum time you need .
 
 Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/0000000000317409[CodeJam 20, round 1C, Problem 1]
 
 
 == Solution - Manhattan Distance (L1 Distance)
 
-The idea is to simulate the celebrity path, and then, for each step Si determine if you can reach the point in time, starting from your position. If so max(your-time-to-Si, celeb-time-to-Si) is a possible way to reach the celebrity. To complete problem, you need to select the minimum of the above distances. 
+The idea is to simulate the celebrity path, and then, for each step Si determine the https://en.wikipedia.org/wiki/Taxicab_geometry[Manhattan distance] starting from your position. If you can reach such point by the time the celebrity arrives there, you meet the celebrity.
+
+In this case, max(your-time-to-Si, celeb-time-to-Si) is one of the ways to reach the celebrity. To solve the problem, you need to select the minimum of the above. 
 
 ----
 int result = MAX_INT
