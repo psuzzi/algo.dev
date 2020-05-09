@@ -4,9 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
-import java.util.Stack;
 import java.util.function.Consumer;
 
 public class Solution {

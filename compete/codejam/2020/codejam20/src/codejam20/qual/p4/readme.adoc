@@ -1,0 +1,55 @@
+= CJ2020 Qual P4 - ESAb ATAb
+
+A system has an hidden array of maximum B=100 elements, 0 and 1. 
+You can query the system to get one bit at a time, with a function query(i), which returns the i-th element.
+After every 10-th query, a random fluctuation modifies the whole array in four possible ways, each one with 25% probability:
+- complemented
+- reversed
+- both complemented and reversed
+- same as the original.
+
+Find the original (hidden) sequence with a maximum of 150 queries. 
+
+Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/0000000000209a9e[CodeJam 20, qualification round, Problem 4 (interactive)]
+
+== Solution
+
+For the first test case B=10. Since there is no random fluctuation, we can get the results with a simple for loop.
+----
+answer = int[B]
+for i=0 to B
+    answer[i] = query(i)
+----
+
+For the other test cases, we need an indicator to tell us which change happened to the array.
+
+The four types of modifications can be caused by two possible independent events, each with 50% probability 
+- 50% of times the result is complemented
+- 50% of times the result is reversed
+
+Say we have 20 elements, and we know the first five and the last five, since we queried the array before fluctuations.
+0 1 0 0 0 . . . . . . . . . . 1 0 1 0 0
+
+
+After a fluctuation, to detect the array is complemented, we need two bits of equal value. For instance, the first bit and the last bit are both 0 before fluctuation. So, if the bits are complemented, this bit will change its value from 0 to 1. 
+
+Similarly, to detect the array was reversed, we need two bits of different value. For instance, the second, and the second-to-last bit are respectively 1 and 0. Since we already know if the result was complemented using the first indicator, we can easily detect if the array was also reversed looking at the values of the pair.
+
+
+== Impl
+
+My implementation is incomplete link:Solution.java[Java]. Please see correct implementations listed below. 
+
+See also
+
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/eGlhb3d1YzE[xiaowuc1] #1 in c++
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/c2FtLnJlaW5laHI[sam.reinehr] #17 in Java
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/a21vZA[kmod] #20 in python 2
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/amVycnltYW8[jerrymao] #25 in python 3 and c++
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/cHpm[pzf] #29 in python3
+
+
+
+== References
+
+* https://dev.to/serpent7776/google-code-jam-2020-qualifications-a05
