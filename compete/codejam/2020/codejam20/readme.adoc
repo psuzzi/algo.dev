@@ -1,7 +1,9 @@
 = Codejam 2020
 
 * Qualification
-* Rouund 1A
+** link:src/codejam20/qual/p4[Qual P4 - ESAb ATAb]
+* Round 1A
+** link:src/codejam20/comp/r1a1[R1 P1 - Pattern Matching]
 * Round 1B
 * Round 1C
 ** link:src/codejam20/comp/r1c1[R1C P1 - Overexcited Fan] : Manhattan distance

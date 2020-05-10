@@ -1,7 +1,6 @@
 package codejam20.qual.p3;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,8 +9,7 @@ import java.util.function.Consumer;
 public class Solution {
 
 	public static void main(String[] args) {
-//		Scanner in = new Scanner(System.in);
-		scan("problem/qual.p3/input1.txt", in -> {
+		scan( Solution.class, "in.txt", in -> {
 			int t = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
 			for (int i = 1; i <= t; ++i) {
 				int n = in.nextInt();
@@ -23,7 +21,6 @@ public class Solution {
 				System.out.println("Case #" + i + ": " + solve(n,activities) );
 			}
 		});
-//		in.close();
 	}
 	
 	static class Activity{
@@ -82,12 +79,16 @@ public class Solution {
 		}
 		return new String(res);
 	}
-
-	static void scan(String filename, Consumer<Scanner> consumer) {
-		try (Scanner sc = new Scanner(new File(filename))) {
+	
+	/**
+	 * Scan System.in, a resource on classpath or a given file depending on params  
+	 */
+	public static void scan(Class<?> cl, String path, Consumer<Scanner> consumer) {
+		try (Scanner sc = (path == null) ? new Scanner(System.in)
+				: (cl == null) ? new Scanner(new File(path)) : new Scanner(cl.getResourceAsStream(path))) {
 			consumer.accept(sc);
-		} catch (FileNotFoundException e) {
-			System.err.printf("Error scanning %s", filename);
+		} catch (Exception e) {
+			System.err.println("ERROR in " + cl + " < " + path);
 			e.printStackTrace();
 		}
 	}

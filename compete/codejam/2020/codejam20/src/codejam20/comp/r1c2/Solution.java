@@ -66,6 +66,9 @@ public class Solution {
 	}
 
 
+	/**
+	 * Scan System.in, a resource on classpath or a given file depending on params  
+	 */
 	public static void scan(Class<?> cl, String path, Consumer<Scanner> consumer) {
 		try (Scanner sc = (path == null) ? new Scanner(System.in)
 				: (cl == null) ? new Scanner(new File(path)) : new Scanner(cl.getResourceAsStream(path))) {

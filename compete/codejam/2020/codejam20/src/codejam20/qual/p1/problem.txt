@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+N Ai $
+B 
+max nr houses?
+
+houses from the less expensive
+
+T
+
+for case
+N B
+a0 a1 ... an-1

@@ -1,5 +1,7 @@
-package codejam20.qual.p2;
+package codejam20.comp.r1b3;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -9,38 +11,28 @@ public class Solution {
 		scan(Solution.class, "in.txt", in -> {
 			int t = in.nextInt(); // Scanner has functions to read ints, longs, strings, chars, etc.
 			for (int i = 1; i <= t; ++i) {
-				String s = in.next();
-				System.out.println("Case #" + i + ": " + solve(s) );
+				int r = in.nextInt();
+				int s = in.nextInt();
+				System.out.print("Case #" + i + ": ");
+				solve(r,s);
 			}
 		});
 	}
 
-	private static String solve(String s) {
-		StringBuilder sb = new StringBuilder();
-		int n;
-		char [] chars = s.toCharArray();
-		int level = 0;
-		int toAdd=0;
-		for(int i=0; i<chars.length; i++) {
-			n = chars[i]-'0';
-			toAdd = n-level;
-			if(toAdd>0) {
-				// open par
-				for(int p=0; p<toAdd; p++)
-					sb.append('(');
-			} else if (toAdd<0) {
-				// close par
-				for(int p=0; p<(-toAdd); p++)
-					sb.append(')');
-			}
-			level += toAdd; 
-			sb.append(n);
-		}
-		if(level>0) {
-			for(int p=0; p<level; p++)
-				sb.append(')');
-		}
-		return sb.toString();
+	private static void solve(int r, int s) {
+		int n = 0;
+		int k = 0, nr = 0, nc = 0, sum = 0;
+		
+		int [][] deck = new int[r][s];
+		
+		List<int[]> ops = new ArrayList<>();
+		System.out.println(n);
+		for(int[] op : ops)
+			System.out.println(op[0] + " " + op[1]);
+	}
+	
+	static final void swap(int [][] deck, List<int[]> ops) {
+		
 	}
 
 	/**
