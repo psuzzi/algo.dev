@@ -5,13 +5,16 @@ Modify the string by inserting the minimum number of open and closing parenthese
 
 For instance: 
 
-`101` --> `(1)0(1)`
-`111000` --> `(111)000`
+----
+101     --> (1)0(1)
+111000` --> (111)000
+----
+
 
 Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/0000000000209a9f[CodeJam 20, Qualification, Problem 2]
 
 
-== Solution - Track the nesting level
+== Solution - Balance parentheses counting depth
 
 We can solve by using an integer to keep track of the current `level` (nesting depth). 
 Then, comparing each digit with the level, we know how many parentheses to open/close

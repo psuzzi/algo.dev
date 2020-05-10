@@ -1,23 +1,35 @@
 = Codejam 2020
 
-Here is a list of the CodeJam 2020 problems I attempted, each one linked with to the problem's solution.
+List of CodeJam 2020 problems I attempted. 
+For each one there is explaination and solution.
 
 * Qualification
-** link:src/codejam20/qual/p1[Qual P1 - Vestigium]: array loops
-** link:src/codejam20/qual/p2[Qual P2 - Nesting Depth]: parentheses stack
-** link:src/codejam20/qual/p4[Qual P4 - ESAb ATAb]: indicators, array indices manipulation
+** link:src/codejam20/qual/p1[Q, Problem 1 - Vestigium]: double loops in arrays
+** link:src/codejam20/qual/p2[Q, Problem 2 - Nesting Depth]: balance parentheses counting depth
+** link:src/codejam20/qual/p3[Q, Problem 3 - Parenting Partnering Returns]: greedy scheduling
+** link:src/codejam20/qual/p4[Q, Problem 4 - ESAb ATAb]: interactive, manipulate array indices (incomplete solution)
 * Round 1A
-** link:src/codejam20/comp/r1a1[R1 P1 - Pattern Matching]
+** link:src/codejam20/comp/r1a1[1A, Problem 1 - Pattern Matching]
 * Round 1B
 * Round 1C
-** link:src/codejam20/comp/r1c1[R1C P1 - Overexcited Fan] : Manhattan distance
-** link:src/codejam20/comp/r1c2[R1C P2 - Overrandomized] : Benford's law
+** link:src/codejam20/comp/r1c1[1C, Problem 1 - Overexcited Fan] : Manhattan distance
+** link:src/codejam20/comp/r1c2[1C, Problem 2 - Overrandomized] : Benford's law
 
 
-https://codingcompetitions.withgoogle.com/codejam/archive/2020[Google Codejam 2020 Archive]
+All the problems are here: https://codingcompetitions.withgoogle.com/codejam/archive/2020[Google Codejam 2020 Archive]
 
 == Note
 
-At CodeJam 2020 I was disqualified because I published my solution to a GitHub public repository.
-Keep in mind it is not healthy to publicly commit information about problems before the round ends 
-I won't have passed to the second round anyway but so doing, I took the risk of bein disqualified from multiple competitions.
+Never publish information about the problems while a round is still open. 
+You can get disqualified from the competition if someone finds and copies your code.
+
+
+== References
+
+Other references and sources
+
+* errichto videos https://www.youtube.com/watch?v=KbXk_-M0kw8[A B C Explained], https://www.youtube.com/watch?v=AK45-rrnYhY[Interactive Problem D]
+* https://dev.to/serpent7776/google-code-jam-2020-qualifications-a05
+* https://github.com/salvois/codejam
+* https://codeforces.com/blog/entry/71545[Google Code Jam 2020 - Codeforces]
+* https://groups.google.com/d/forum/google-code/join[Google Code Jam - Google Groups]

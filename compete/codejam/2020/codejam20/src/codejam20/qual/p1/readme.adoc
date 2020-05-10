@@ -45,7 +45,7 @@ To compute the number of repeated elements on columns, we proceed similarly to w
 
 See my implementation in link:Solution.java[Java]
 
-See also
+Other participant's implementations
 
 * https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/eGlhb3d1YzE[xiaowuc1] #1 in c++
 * https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/c2FtLnJlaW5laHI[sam.reinehr] #17 in Java
@@ -53,5 +53,8 @@ See also
 * https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/amVycnltYW8[jerrymao] #25 in python 3 and c++
 * https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/cHpm[pzf] #29 in python3
 
-References
+== References
+
+
+
 * https://medium.com/@srakeshkumar1019/qualification-round-2020-code-jam-2020-vestigium-7pts-solution-code-17c86943474

@@ -7,6 +7,12 @@ import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
+/**
+ * CodeJam 20, Qualification, Problem 4
+ * 
+ * @author psuzzi
+ * @see https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/0000000000209a9e
+ */
 public class Solution {
 
 	public static void main(String[] args) {
