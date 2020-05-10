@@ -1,0 +1,35 @@
+= CJ2020 R1A P1 - Pattern Matching
+
+Time limit: 20 seconds per test set.
+Memory limit: 1GB.
+1 ≤ T ≤ 100.
+2 ≤ N ≤ 50.
+2 ≤ length of Pi ≤ 100, for all i.
+Each character of Pi is either an uppercase English letter or an asterisk (*), for all i.
+At least one character of Pi is an uppercase English letter, for all i.
+
+Test set 1 (Visible Verdict)
+Exactly one character of Pi is an asterisk (*), for all i.
+The leftmost character of Pi is the only asterisk (*), for all i.
+
+Test set 2 (Visible Verdict)
+Exactly one character of Pi is an asterisk (*), for all i.
+
+Test set 3 (Visible Verdict)
+At least one character of Pi is an asterisk (*), for all i.
+
+Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd74/00000000002b3034[CodeJam 20, round 1A, Problem 1]
+
+
+== Solution - Pattern Matching
+
+== Impl
+
+See my implementation in link:Solution.java[Java]
+
+See also
+
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd74/R2VubmFkeS5Lb3JvdGtldmljaA[Gennady.Korotkevich] (#1) impl in C++14
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd74/VGxhdG9hbmk[Tlatoani] (#52) impl in Kotlin
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd74/amVycnltYW8[jerrymao] (#55) impl in Python 3
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd74/dXdp[uwi] (#65) impl in Java
