@@ -1,6 +1,7 @@
 = Codejam 2020
 
 * Qualification
+** link:src/codejam20/qual/p1[Qual P1 - Vestigium]
 ** link:src/codejam20/qual/p4[Qual P4 - ESAb ATAb]
 * Round 1A
 ** link:src/codejam20/comp/r1a1[R1 P1 - Pattern Matching]
