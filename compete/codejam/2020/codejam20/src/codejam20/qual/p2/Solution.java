@@ -18,28 +18,22 @@ public class Solution {
 	private static String solve(String s) {
 		StringBuilder sb = new StringBuilder();
 		int n;
-		char [] chars = s.toCharArray();
 		int level = 0;
-		int toAdd=0;
-		for(int i=0; i<chars.length; i++) {
-			n = chars[i]-'0';
-			toAdd = n-level;
-			if(toAdd>0) {
-				// open par
-				for(int p=0; p<toAdd; p++)
-					sb.append('(');
-			} else if (toAdd<0) {
-				// close par
-				for(int p=0; p<(-toAdd); p++)
-					sb.append(')');
-			}
-			level += toAdd; 
+		for( char c : s.toCharArray() ) {
+			n = c-'0';
+			// open
+			for(; level<n; level++)
+				sb.append('(');
+			// close
+			for(; level>n; level--)
+				sb.append(')');
+			
 			sb.append(n);
 		}
-		if(level>0) {
-			for(int p=0; p<level; p++)
-				sb.append(')');
-		}
+		//close remaining
+		for(; level>0; level--)
+			sb.append(')');
+
 		return sb.toString();
 	}
 

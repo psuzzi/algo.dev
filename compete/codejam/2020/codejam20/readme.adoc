@@ -1,8 +1,11 @@
 = Codejam 2020
 
+Here is a list of the CodeJam 2020 problems I attempted, each one linked with to the problem's solution.
+
 * Qualification
-** link:src/codejam20/qual/p1[Qual P1 - Vestigium]
-** link:src/codejam20/qual/p4[Qual P4 - ESAb ATAb]
+** link:src/codejam20/qual/p1[Qual P1 - Vestigium]: array loops
+** link:src/codejam20/qual/p2[Qual P2 - Nesting Depth]: parentheses stack
+** link:src/codejam20/qual/p4[Qual P4 - ESAb ATAb]: indicators, array indices manipulation
 * Round 1A
 ** link:src/codejam20/comp/r1a1[R1 P1 - Pattern Matching]
 * Round 1B
@@ -12,3 +15,9 @@
 
 
 https://codingcompetitions.withgoogle.com/codejam/archive/2020[Google Codejam 2020 Archive]
+
+== Note
+
+At CodeJam 2020 I was disqualified because I published my solution to a GitHub public repository.
+Keep in mind it is not healthy to publicly commit information about problems before the round ends 
+I won't have passed to the second round anyway but so doing, I took the risk of bein disqualified from multiple competitions.

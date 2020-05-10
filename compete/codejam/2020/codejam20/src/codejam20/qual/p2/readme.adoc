@@ -1,0 +1,50 @@
+= CJ2020 Qual P2 - Nesting Depth
+
+You get a string `s` with digits.
+Modify the string by inserting the minimum number of open and closing parentheses so that the string is balanced and each digit `d` is nested inside exactly `d` pairs of parentheses.
+
+For instance: 
+
+`101` --> `(1)0(1)`
+`111000` --> `(111)000`
+
+Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/0000000000209a9f[CodeJam 20, Qualification, Problem 2]
+
+
+== Solution - Track the nesting level
+
+We can solve by using an integer to keep track of the current `level` (nesting depth). 
+Then, comparing each digit with the level, we know how many parentheses to open/close
+
+----
+result = ''
+level = 0
+
+for char c in input_string
+	n = c-'0'
+	while level<n 
+		result.add( '(' )
+		level++
+	while level>n
+		result.add( ')' )
+		level--
+	result.add( n )
+while level>0
+	result.add( ')' )
+	level--
+
+return result
+----
+
+== Impl
+
+See my implementation in link:Solution.java[Java]
+
+See also
+
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/eGlhb3d1YzE[xiaowuc1] #1 in c++
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/c2FtLnJlaW5laHI[sam.reinehr] #17 in Java
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/a21vZA[kmod] #20 in python 2
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/amVycnltYW8[jerrymao] #25 in python 3 and c++
+* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/cHpm[pzf] #29 in python3
+

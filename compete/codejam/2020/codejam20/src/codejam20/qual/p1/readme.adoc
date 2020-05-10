@@ -53,3 +53,5 @@ See also
 * https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/amVycnltYW8[jerrymao] #25 in python 3 and c++
 * https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fd27/cHpm[pzf] #29 in python3
 
+References
+* https://medium.com/@srakeshkumar1019/qualification-round-2020-code-jam-2020-vestigium-7pts-solution-code-17c86943474
