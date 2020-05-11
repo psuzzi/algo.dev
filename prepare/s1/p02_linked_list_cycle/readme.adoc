@@ -1,10 +1,11 @@
 = Linked List Cycle
 
-https://leetcode.com/problems/linked-list-cycle/
+Determine if a LinkedList has a cycle
 
-determine if a LL has a cycle
+Description: https://leetcode.com/problems/linked-list-cycle/
 
-== Algo
+
+== Solution
 
 The fastest method is using the Floyd's Cycle-finding algorithm.
 

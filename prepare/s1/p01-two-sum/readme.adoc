@@ -1,9 +1,5 @@
 = Two sum
 
-https://leetcode.com/problems/two-sum/
-
-== Problem
-
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -17,9 +13,9 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ----
 
-== Algo
+Description: https://leetcode.com/problems/two-sum/
 
-
+== Solution
 
 === 1. Brute forde
 
@@ -31,7 +27,7 @@ for i=0 to nums.length-2
 
 time O(n^2) space O(1)
 
-=== Two pass Ht
+=== 2. Two passes with Hashtable
 
 First, add all the n_i numbers in an hashtable with k=n_i and v=i
 Scan all the n_i num, 
@@ -39,7 +35,7 @@ Scan all the n_i num,
 
 time O(n) space O(n)
 
-=== One-pass hashtable
+=== 3. One-pass hashtable
 
 Scan all the n_i in numbers
   if Ht contains target-n_i, 

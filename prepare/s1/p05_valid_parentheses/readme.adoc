@@ -7,9 +7,9 @@ Valid means:
 - open brackets must be closed in the correct order
 
 
-https://leetcode.com/problems/valid-parentheses/
+Description: https://leetcode.com/problems/valid-parentheses/
 
-== Using a stack 
+== Solution, using a stack 
 
 A natural solution is using a stack to keep the parentheses encountered so far. 
 For each new open parenthesis, we add it to the stack. 

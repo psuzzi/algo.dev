@@ -1,14 +1,12 @@
 = Best time to buy and sell stock
 
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-
 given an array, the i-th element is the price of a stock on day i
 
 You can only complete a buy/sell transaction, and you cannot sell before buying a stock.
 
 Design the algorithm to find the maximum profit.
 
-== Examples
+Examples
 
 Input: [7,1,5,3,6,4]
 Output: 5
@@ -18,7 +16,9 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: no transaction done. Profit = 0.
 
-== Algo
+Description: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+== Solution
 
 == Brute force
 

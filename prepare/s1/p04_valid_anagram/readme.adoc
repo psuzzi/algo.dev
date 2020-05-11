@@ -3,9 +3,9 @@
 Given two strings s and t determine if t is a valid anagram of s
 
 
-https://leetcode.com/problems/valid-anagram/
+Description: https://leetcode.com/problems/valid-anagram/
 
-== Counting letters
+== Solution, Counting letters
 
 We can count the occurrences of each character of s, and then verify the same letters are used in t
 

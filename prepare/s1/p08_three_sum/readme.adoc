@@ -6,10 +6,9 @@ Note:
 
 The solution set must not contain duplicate triplets.
 
-https://leetcode.com/problems/3sum/
+Description: https://leetcode.com/problems/3sum/
 
-== Solution
-
+== Solution, loop + bidirectional two-sum
 
 We exclude a brute-force approach with three nested loops which would cost O(n^3) time.
 
