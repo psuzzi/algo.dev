@@ -1,0 +1,50 @@
+= Two sum
+
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+----
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+----
+
+Description: https://leetcode.com/problems/two-sum/
+
+== Solution
+
+=== 1. Brute forde
+
+Test all pairs 
+
+for i=0 to nums.length-2
+  for j=i+1 to nums.length-1
+    if sum == target, return indices
+
+time O(n^2) space O(1)
+
+=== 2. Two passes with Hashtable
+
+First, add all the n_i numbers in an hashtable with k=n_i and v=i
+Scan all the n_i num, 
+    if the complement is in the hashtable, return the indices
+
+time O(n) space O(n)
+
+=== 3. One-pass hashtable
+
+Scan all the n_i in numbers
+  if Ht contains target-n_i, 
+    return indices
+  Ht put (k=n_i, v=i) 
+
+  time O(n) space O(n)
+
+
+== Impl
+
+See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 

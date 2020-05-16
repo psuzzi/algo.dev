@@ -28,4 +28,11 @@ public interface IO {
 			throw new RuntimeException("Error scanning " + path, e);
 		}
 	}
+
+	public static void info(){
+		
+		System.out.printf("INFOs%n");
+		System.out.printf("-user.dir: %s%n", System.getProperty("user.dir"));
+
+	}
 }

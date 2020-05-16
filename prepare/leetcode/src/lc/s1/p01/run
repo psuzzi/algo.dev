@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# run java or python
+case "${1}" in 
+
+    java)
+        exec 5>&1
+        FF=$(java -cp ../../../../bin/ lc.s1.p01.Solution < in.txt|tee /dev/fd/5)
+        DIFF=$(diff out.txt <(echo "${FF}"))
+
+
+        if [ "${DIFF}" != "" ]; then
+            printf "\nResult different than expected:\n"
+            echo "${DIFF}"
+        fi
+
+        # if [ ${DIFF} -ne 0 ] ; then
+        #     echo "Does not match expected output"
+        #     echo ${DIFF}
+        # fi
+
+
+        # out < java -cp ../../../../bin/ lc.s1.p00.Solution < in.txt
+        # DIFF=$(diff ${out} - out.txt)
+        # if [ $DIFF -ne 0 ] ; then
+        #     echo "The directory was modified"
+        # fi
+
+        # exec 5>&1
+        # FF=$(java -cp ../../../../bin/ lc.s1.p00.Solution < in.txt|tee /dev/fd/5)
+        #echo $FF
+        ;;
+    py)
+        exec 5>&1
+        $(python3 Solution.py < in.txt | tee /dev/fd/5)
+        ;;
+    *)
+        echo "usage: ${FUNCNAME[0]} java|py"
+        ;;
+esac
