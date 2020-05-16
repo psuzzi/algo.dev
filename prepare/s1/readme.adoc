@@ -6,16 +6,16 @@ https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 
 === W1 - Sequences:
 
-- link:w1/p01[Two Sum]
-- link:w1/p02[Cycle in a LL] with Floyd's cycle-finding
-- link:w1/p03[Best time to buy and sell] with Kadane's variation
-- link:w1/p04[Validate anagram] by counting letters
-- link:w1/p05[Validate parentheses] with stack
-- link:w1/p06[Product of arrays except self]
-- link:w1/p07[subarray with largest sum] with kadane
-- link:w1/p08[find three numbers which add up to given sum] in ~ O(n^2)
-- link:w1/p09[merge overlapping intervals] by sorting for starting time
-- link:w1/p10[group anagrams together] categorize by string / count
+- link:src/w1/p01[Two Sum]
+- link:src/w1/p02[Cycle in a LL] with Floyd's cycle-finding
+- link:src/w1/p03[Best time to buy and sell] with Kadane's variation
+- link:src/w1/p04[Validate anagram] by counting letters
+- link:src/w1/p05[Validate parentheses] with stack
+- link:src/w1/p06[Product of arrays except self]
+- link:src/w1/p07[subarray with largest sum] with kadane
+- link:src/w1/p08[find three numbers which add up to given sum] in ~ O(n^2)
+- link:src/w1/p09[merge overlapping intervals] by sorting for starting time
+- link:src/w1/p10[group anagrams together] categorize by string / count
 
 === W2 - Data Structures:
 
