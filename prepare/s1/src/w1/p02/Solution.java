@@ -1,30 +1,26 @@
 package w1.p02;
 
-/**
- * Definition for singly-linked list.
- */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
 
-    public boolean hasCycle(ListNode head) {
-
-        ListNode slow = head, fast = head;
-        while(fast!=null && fast.next!=null){
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow==fast)
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        for( int i=0; i< nums.length-1; i++)
+            if( nums[i] == nums[i+1] )
+                return true;
+        return false;   
+    }
+    
+    public boolean containsDuplicate2(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for ( int i : nums ){
+        	if(!set.add(i))
                 return true;
         }
-        // ll end reached
-        return false;
+        return false;   
     }
 
 }

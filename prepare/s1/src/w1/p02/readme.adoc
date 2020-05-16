@@ -1,61 +1,24 @@
-= Linked List Cycle
+= Find duplicates in array
 
-Determine if a LinkedList has a cycle
+Determine if an array of integers has duplicates
 
-Description: https://leetcode.com/problems/linked-list-cycle/
+Description: https://leetcode.com/problems/contains-duplicate/
 
 
-== Solution
+== Solutions
 
-The fastest method is using the Floyd's Cycle-finding algorithm.
+A first solution could be using a set to store all the numbers, and return false if there is a duplicate. 
 
-=== Floyd's cycle-finding
+Time: O(n)
+Space: O(n)
 
-Scan the list with two pointers. One slow, moves one step at a time. The other fast, moves two steps at each iteration.
 
-If the pointers meets on the same node, there is a loop. Otherwise, there are no cycles
+Another approach is sorting the list, and then scan sequentially for finding duplicates.
 
-time/space complexity: O(n) / O(1)
+Time: O(n log n)
+Space: O(1)
 
-=== Explaination
-
-Floyd's cycle-finding algorithm (aka tortoise and hare)
-
-In a linked list with no cycles, you can scan all the list and reach the last element. If there is a cycle, one of the elements in the list points back to one of its predecessors creating a loop. 
-
-With Floyd's cycle-finding algorithm, if there is no loop, the scan reaches the end. If there is a loop, the slow and the fast pointer meet at a certain point in the iteration. 
-Such meeting, in a linked list X, happens at the smallest i (number of steps) such that X_i = X_2i
-
-== Algorithm
-
-Assuming this is a node of a singly linked list.
-
-----
-ListNode
-    val
-    next
-----
-
-The algorithm is
-
-----
-slow = fast = head
-while fast != null and fast.next != null:
-    slow = slow.next
-    fast = fast.next.next
-    if slow == fast:
-        return true
-# LL end
-return true
-----
-            
 
 == Impl
 
-See implementation in link:Solution.java[Java], link:Solution.py[Python 3] 
-
-== References
-
-- https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
-- https://medium.com/@tuvo1106/the-tortoise-and-the-hare-floyds-algorithm-87badf5f7d41
-- https://stackoverflow.com/questions/2936213/explain-how-finding-cycle-start-node-in-cycle-linked-list-work
+See implementations in link:Solution.java[Java]

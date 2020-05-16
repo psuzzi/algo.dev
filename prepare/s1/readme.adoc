@@ -7,7 +7,7 @@ https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 === W1 - Sequences:
 
 - link:src/w1/p01[Two Sum]
-- link:src/w1/p02[Cycle in a LL] with Floyd's cycle-finding
+- link:src/w1/p02[Find duplicates in array] 
 - link:src/w1/p03[Best time to buy and sell] with Kadane's variation
 - link:src/w1/p04[Validate anagram] by counting letters
 - link:src/w1/p05[Validate parentheses] with stack
