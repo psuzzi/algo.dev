@@ -22,6 +22,7 @@ https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 - link:src/w2/p01[Reverse a singly-linked list]
 - link:src/w2/p02[Cycle in a LL] with Floyd's cycle-finding
 - link:src/w2/p03[Container with most water] with two pointers
+- link:src/w2/p04[Minimum in a rotated sorted array]
 
 
 
