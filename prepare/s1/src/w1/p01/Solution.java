@@ -1,5 +1,6 @@
+package w1.p01;
+
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 
 class Solution {

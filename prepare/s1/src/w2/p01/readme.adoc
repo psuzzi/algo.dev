@@ -1,0 +1,23 @@
+= Reverse a LinkedList
+
+Reverse a singly linked list.
+
+
+Example: 
+
+----
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+----
+
+Description: https://leetcode.com/problems/reverse-linked-list/
+
+== Solution
+
+
+== Impl
+
+
+== References
+
+* https://www.youtube.com/watch?time_continue=123&v=O0By4Zq0OFc[]

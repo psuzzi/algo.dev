@@ -1,3 +1,4 @@
+package w1.p10;
 import java.util.*;
 import java.util.stream.Collectors;
 

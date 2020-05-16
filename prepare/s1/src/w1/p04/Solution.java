@@ -1,4 +1,4 @@
-package prepare.s1._04_valid_anagram;
+package w1.p04;
 
 class Solution {
     public boolean isAnagram(String s, String t) {

@@ -4,18 +4,21 @@
 
 https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 
-=== Exercises on Sequences:
+=== W1 - Sequences:
 
-- link:p01-two-sum[Two Sum]
-- link:p02_linked_list_cycle[Cycle in a LL] with Floyd's cycle-finding
-- link:p03_best_time_to_buy_and_sell[Best time to buy and sell] with Kadane's variation
-- link:p04_valid_anagram[Validate anagram] by counting letters
-- link:p05_valid_parentheses[Validate parentheses] with stack
-- link:p06_product_array_except_self[Product of arrays except self]
-- link:p07_max_subarray[subarray with largest sum] with kadane
-- link:p08_three_sum[find three numbers which add up to given sum] in ~ O(n^2)
-- link:p09_merge_intervals[merge overlapping intervals] by sorting for starting time
-- link:p10_group_anagrams[group anagrams together] categorize by string / count
+- link:w1/p01[Two Sum]
+- link:w1/p02[Cycle in a LL] with Floyd's cycle-finding
+- link:w1/p03[Best time to buy and sell] with Kadane's variation
+- link:w1/p04[Validate anagram] by counting letters
+- link:w1/p05[Validate parentheses] with stack
+- link:w1/p06[Product of arrays except self]
+- link:w1/p07[subarray with largest sum] with kadane
+- link:w1/p08[find three numbers which add up to given sum] in ~ O(n^2)
+- link:w1/p09[merge overlapping intervals] by sorting for starting time
+- link:w1/p10[group anagrams together] categorize by string / count
+
+=== W2 - Data Structures:
+
 
 
 

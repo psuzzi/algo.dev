@@ -1,3 +1,4 @@
+package w1.p07;
 class Solution {
     
     public int maxSubArray(int[] nums) {

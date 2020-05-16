@@ -1,4 +1,4 @@
-package prepare.s1._03_best_time_to_buy_and_sell;
+package w1.p03;
 
 class Solution {
     public int maxProfit(int[] prices) {

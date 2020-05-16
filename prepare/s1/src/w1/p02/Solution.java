@@ -1,4 +1,4 @@
-package prepare.s1._02_linked_list_cycle;
+package w1.p02;
 
 /**
  * Definition for singly-linked list.

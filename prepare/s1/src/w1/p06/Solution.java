@@ -1,3 +1,4 @@
+package w1.p06;
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int[] ans = new int[nums.length];
