@@ -6,9 +6,17 @@ package w2.p01;
  * @author psuzzi
  * @see https://leetcode.com/problems/reverse-linked-list/
  */
-public class Solution {
+class Solution {
     public ListNode reverseList(ListNode head) {
-        return null;
+        ListNode prev = null;
+        ListNode curr = head;
+        while(curr!=null){
+            ListNode tempNext = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = tempNext;
+        }
+        return prev;
     }
 }
 
@@ -19,18 +27,9 @@ public class Solution {
  *
  */
 class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode() {
-	}
-
-	ListNode(int val) {
-		this.val = val;
-	}
-
-	ListNode(int val, ListNode next) {
-		this.val = val;
-		this.next = next;
-	}
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }

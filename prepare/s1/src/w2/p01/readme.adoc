@@ -4,19 +4,39 @@ Reverse a singly linked list.
 
 
 Example: 
-
-----
-Input: 1->2->3->4->5->NULL
-Output: 5->4->3->2->1->NULL
-----
+The input list `1 -> 2 -> 3 -> 4 -> 5 -> null`,
+should change to `5 -> 4 -> 3 -> 2 -> 1 -> null`
 
 Description: https://leetcode.com/problems/reverse-linked-list/
 
-== Solution
+== Solution (Iterative)
+
+Go through all the list. 
+For each node in the list, starting from the head
+
+. store the reference to `node.next` in a temporary variable `tempNext`
+. change the reference of `node.next` to the previous node of the list, or null if this is the first element processed  
+. store the reference of `prev` node to the current node. At the next loop, this will be the previous node  
+. set the reference of `curr` node to `tempNext`. At the next loop, this will be the current node
+
+Algorithm:
+
+----
+reverse_list( node )
+	prev = null
+	curr = head
+	while curr != null
+		tempNext = curr.next
+		curr.next = prev
+		prev = curr
+		curr = tempNext
+	return prev
+----
 
 
 == Impl
 
+See implementation in link:Solution.java[Java]
 
 == References
 
