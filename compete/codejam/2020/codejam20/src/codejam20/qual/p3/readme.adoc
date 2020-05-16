@@ -4,6 +4,8 @@ You are given a set of intervals representing the activities to be done by a kid
 The parents `C` and `J` need to assist the kid, so the activities are to be split.  
 Split the activities in two non-overlapping sets for the parents `C` and `J`.
 
+image::scheduling.png[] 
+
 Examples
 
 For instance, 
