@@ -2,15 +2,13 @@ from typing import List
 import fileinput
 
 def main():
+    sol = Solution()
     with open('in.txt') as f:
-        lines=f.readlines()
-        lines = fileinput.input('in.txt')
-        n = int(lines[0])
-        nums = [list(map(int, lines[1].split())) for i in range(n)]
-        target = int(lines[2])
-        print('two')
-        print ("Solution: {} -> {}".format(nums, target))
-        print('two')
+        n = int(f.readline().strip())
+        nums = list(map(int, f.readline().strip().split() ))
+        target = int(f.readline().strip())
+        res = sol.twoSum(nums, target)
+        print("{}".format(res))
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:

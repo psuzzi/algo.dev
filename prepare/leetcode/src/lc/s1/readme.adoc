@@ -7,15 +7,15 @@ https://yangshun.github.io/tech-interview-handbook/best-practice-questions
 === Exercises on Sequences:
 
 - link:p01[Two Sum]
-- link:p02[Cycle in a LL] with Floyd's cycle-finding
-- link:p03[Best time to buy and sell] with Kadane's variation
-- link:p04[Validate anagram] by counting letters
-- link:p05[Validate parentheses] with stack
-- link:p06[Product of arrays except self]
-- link:p07[subarray with largest sum] with kadane
-- link:p08[find three numbers which add up to given sum] in ~ O(n^2)
-- link:p09[merge overlapping intervals] by sorting for starting time
-- link:p10[group anagrams together] categorize by string / count
+// - link:p02[Cycle in a LL] with Floyd's cycle-finding
+// - link:p03[Best time to buy and sell] with Kadane's variation
+// - link:p04[Validate anagram] by counting letters
+// - link:p05[Validate parentheses] with stack
+// - link:p06[Product of arrays except self]
+// - link:p07[subarray with largest sum] with kadane
+// - link:p08[find three numbers which add up to given sum] in ~ O(n^2)
+// - link:p09[merge overlapping intervals] by sorting for starting time
+// - link:p10[group anagrams together] categorize by string / count
 
 
 
