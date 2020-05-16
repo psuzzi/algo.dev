@@ -27,6 +27,7 @@ Time: O(n^2)
 == Solution 2, Two pointers
 
 Intuition: 
+
 * the area is limited by the height of the shortest line
 * the farther are the lines, the bigger will be the area
 
