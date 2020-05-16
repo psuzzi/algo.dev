@@ -1,0 +1,7 @@
+= Problem 0 - Runners
+
+This folder contains a few examples useful to run solutions in three different ways
+
+* java
+* python
+* bash

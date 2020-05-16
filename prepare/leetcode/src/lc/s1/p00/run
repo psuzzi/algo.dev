@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# runs the test 
+run() {
+    run_java(){
+        java -cp ../../../../bin/ lc.s1.p00.Solution < in.txt
+    }
+    run_py(){
+        python3 Solution.py < in.txt
+    }
+    check_out(){
+        echo "${1}"
+        local diff=$(diff out.txt <(echo "${1}"))
+        if [ "${diff}" == "" ]
+        then
+            printf "\nCorrect result.\n"
+        else
+            printf "\nWrong result. Diff output:\n"
+            echo "${diff}"
+        fi
+    }
+    usage(){
+        echo "usage: run  -j | -p  [ -x ]"
+    }
+
+    local run_cmd=""
+    local x_check=""
+    while [ "$1" != "" ]; do
+        case $1 in
+            -j | --java8 )   run_cmd=run_java ;;
+            -p | --python3 )     run_cmd=run_py ;;
+            -x | --x-check )  x_check="y" ;;
+            -h | --help )   usage; exit ;;
+            * )             usage; exit 1
+        esac
+        shift
+    done
+
+    # exit if no command is defined
+    if [ -z "${run_cmd}" ]; then 
+        echo "ERROR: you need to choose either option -j or -p"
+        usage
+        exit 1
+    fi
+
+    # run the command and the check if required
+    if [ "${x_check}" == "y" ]; then
+        check_out "$(${run_cmd})"
+    else
+        ${run_cmd}
+    fi
+
+}
+
+run "${@}"
