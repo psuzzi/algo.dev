@@ -1,35 +1,14 @@
-= CJ2020 R1C P1 - Overexcited Fan
-
-A celebrity is moving in a 2D discrete world. It starts from (x,y) and for each time unit moves in one of the four cardinal direction. Its path is given in form "NSSWEEE...". You start from (0,0) and for each time unit, you can move one block or stay still.
-
-Determine if you can meet the celebrity along its path and, if so, which is the minimum time you need .
-
-Description: https://codingcompetitions.withgoogle.com/codejam/round/000000000019fef4/0000000000317409[CodeJam 20, round 1C, Problem 1]
+= Kickstart 2020 RC P2 - Stable Wall
 
 
-== Solution - Manhattan Distance (L1 Distance)
 
-The idea is to simulate the celebrity path, and then, for each step Si determine the https://en.wikipedia.org/wiki/Taxicab_geometry[Manhattan distance] starting from your position. If you can reach such point by the time the celebrity arrives there, you meet the celebrity.
+Description: https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb
 
-In this case, max(your-time-to-Si, celeb-time-to-Si) is one of the ways to reach the celebrity. To solve the problem, you need to select the minimum of the above. 
+
+== Solution 
 
 ----
-int result = MAX_INT
-char[] steps = "NSWEEE".chars
-int[][] tour = new int[steps.len+1][2]
-tour[0] = {X, Y}
-// calculate all steps
-for int i=0 to tour.len-2
-    tour[i+1] = computeMove(tour[i], steps[i])
-// simulate path, from end to start
-for int i=tour.len-1 to 1
-    int pos[] = tour[i]
-    // you start from (0,0)
-    int l1dist = abs(pos[0]) + abs(pos[1])
-    if( l1dist < i)
-        time = max( l1dist, i)
-        result = min(result, time)
-return result;
+
 ----
 
 

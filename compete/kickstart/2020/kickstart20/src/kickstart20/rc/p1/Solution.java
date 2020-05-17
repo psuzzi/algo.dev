@@ -4,54 +4,65 @@ import java.io.File;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
+/**
+ * 
+ * @author psuzzi
+ * @see https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb
+ */
 public class Solution {
 
 	public static void main(String[] args) {
 		scan(Solution.class, "in.txt", in -> {
 			int t = in.nextInt();
 			for (int i = 1; i <= t; ++i) {
-				System.out.println("Case #" + i + ": " + solve(in.nextInt(), in.nextInt(), in.next()));
+				int n = in.nextInt();
+				int k = in.nextInt();
+				int ns[] = new int[n];
+				for(int j=0; j<n; j++) {
+					ns[j] = in.nextInt();
+				}
+				System.out.print("Case #" + i + ": " );
+				solve(ns, k);
 			}
 		});
 	}
-
-	private static String solve(int x, int y, String tourstr) {
-		char[] tcs = tourstr.toCharArray();
-		int[][] tour = new int[tcs.length + 1][2];
-		// first place is X,Y
-		tour[0] = new int[] {x, y};
-		for (int i = 0; i < tcs.length; i++) {
-			tour[i + 1] = move(tour[i], tcs[i]);
+	
+	// 1 2 3 7 9 3 2 1 8 3 2 1
+	
+	private static void solve(int[] ns, int k) {
+		int count=0;
+		
+		int len=ns.length;
+		
+		int cdlen=0;
+		
+		for(int i=len-1; i>=0; i--) {
+			if(ns[i]==1) {
+				// count existing
+				if(cdlen>=k) count++;
+				// start a new sequence
+				cdlen=1;
+			} else 
+				if( i<len-1 && cdlen>0 ) {
+					if( ns[i]==ns[i+1]+1) {
+						// +1
+						cdlen++;
+					} else {
+						// break sequence
+						// count existing
+						if(cdlen>=k) count++;
+						cdlen=0;
+					}
+				}
 		}
-
-		int ans = Integer.MAX_VALUE;
-//		System.out.printf("%nprobl: %s - (%s) %nmypos: (%s, %s)%n", tourstr, tourstr.length(), x, y);
-		for( int i=tour.length-1; i>0; i--) {
-			int pos[] = tour[i];
-			int md = Math.abs(pos[0]) + Math.abs(pos[1]);
-			
-//			System.out.printf(" %s - (%s, %s) \t\t i:%s md:%s %n", i, pos[0], pos[1], i, md);
-			if(md <= i) {
-				int reach = Math.max(md, i);
-				ans = Math.min(ans, reach);
-			}
-		}
-		return "" + (ans != Integer.MAX_VALUE ? ans : "IMPOSSIBLE");
+		// count existing
+		if(cdlen>=k) count++;
+		
+		System.out.printf("%s%n", count);
 	}
 
-	static int[] move(int[] pos, char dir) {
-		switch (dir) {
-		case 'N':
-			return new int[] { pos[0], pos[1] + 1 };
-		case 'S':
-			return new int[] { pos[0], pos[1] - 1 };
-		case 'W':
-			return new int[] { pos[0] - 1, pos[1] };
-		case 'E':
-			return new int[] { pos[0] + 1, pos[1] };
-		}
-		throw new RuntimeException("Direction not allowed");
-	}
+
+
 
 	public static void scan(Class<?> cl, String path, Consumer<Scanner> consumer) {
 		try (Scanner sc = (path == null) ? new Scanner(System.in)

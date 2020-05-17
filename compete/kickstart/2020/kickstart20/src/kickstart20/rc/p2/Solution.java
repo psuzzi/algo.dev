@@ -1,7 +1,14 @@
 package kickstart20.rc.p2;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.Stack;
 import java.util.function.Consumer;
 
 public class Solution {
@@ -10,47 +17,114 @@ public class Solution {
 		scan(Solution.class, "in.txt", in -> {
 			int t = in.nextInt();
 			for (int i = 1; i <= t; ++i) {
-				System.out.println("Case #" + i + ": " + solve(in.nextInt(), in.nextInt(), in.next()));
+				int r = in.nextInt();
+				int c = in.nextInt();
+				char[][] wall = new char[r][c];
+				for(int j=0; j<r; j++) {
+					wall[j] = in.next().toCharArray();
+				}
+				System.out.print("Case #" + i + ": " );
+				solve(wall);
 			}
 		});
 	}
 
-	private static String solve(int x, int y, String tourstr) {
-		char[] tcs = tourstr.toCharArray();
-		int[][] tour = new int[tcs.length + 1][2];
-		// first place is X,Y
-		tour[0] = new int[] {x, y};
-		for (int i = 0; i < tcs.length; i++) {
-			tour[i + 1] = move(tour[i], tcs[i]);
-		}
-
-		int ans = Integer.MAX_VALUE;
-//		System.out.printf("%nprobl: %s - (%s) %nmypos: (%s, %s)%n", tourstr, tourstr.length(), x, y);
-		for( int i=tour.length-1; i>0; i--) {
-			int pos[] = tour[i];
-			int md = Math.abs(pos[0]) + Math.abs(pos[1]);
-			
-//			System.out.printf(" %s - (%s, %s) \t\t i:%s md:%s %n", i, pos[0], pos[1], i, md);
-			if(md <= i) {
-				int reach = Math.max(md, i);
-				ans = Math.min(ans, reach);
+	private static void solve(char[][] wall) {
+		Set<Character> set = new HashSet<>();
+		
+		int rl = wall.length;
+		int cl = wall[0].length;
+		// get charset
+		for( int r=0; r<rl; r++) {
+			for(int c=0; c<cl; c++) {
+				set.add(wall[r][c]);
 			}
 		}
-		return "" + (ans != Integer.MAX_VALUE ? ans : "IMPOSSIBLE");
+		
+		// map
+		Map<Character, Node> map = new HashMap<>();
+		
+		// compute support 
+		String[] supp = new String[cl];
+		for( int r=rl-1; r>=0; r--) {
+			for(int c=0; c<cl; c++) {
+				char ch = wall[r][c];
+				map.computeIfAbsent(ch, k -> new Node(k) );
+				set.add(ch);
+				
+				if(r==rl-1) {
+					supp[c] = ""+ch;
+				} else {
+					if( wall[r][c] != wall[r+1][c] )
+						map.get(wall[r+1][c]).incoming.add(map.get(wall[r][c]));
+						supp[c]+=wall[r][c];
+				}
+			}
+		}
+		
+		Stack<Character> stack = new Stack<>();
+		
+		// topological sort
+		for(Node n : map.values()) {
+//			System.out.printf("%n%s%n", n);
+			if(!n.visited)
+				topSort(n, stack);
+		}
+
+		String out = "";
+		while(!stack.isEmpty())
+			out += stack.pop();
+		
+		System.out.printf("%s%n", out);
+//		System.out.printf("%s%n", Arrays.asList(supp));
 	}
 
-	static int[] move(int[] pos, char dir) {
-		switch (dir) {
-		case 'N':
-			return new int[] { pos[0], pos[1] + 1 };
-		case 'S':
-			return new int[] { pos[0], pos[1] - 1 };
-		case 'W':
-			return new int[] { pos[0] - 1, pos[1] };
-		case 'E':
-			return new int[] { pos[0] + 1, pos[1] };
+	private static void topSort(Node n, Stack<Character> stack) {
+		n.visited = true;
+		for(Node cn : n.incoming) {
+			if(!cn.visited) {
+				topSort(cn, stack);
+			}
 		}
-		throw new RuntimeException("Direction not allowed");
+		stack.push(n.data);
+	}
+	
+	private static boolean isCyclic() {
+		
+	}
+	
+
+	static class Node{
+		
+		public Node(char ch) {
+			this.data = ch;
+		}
+		char data;
+		boolean visited = false;
+		Set<Node> incoming = new HashSet<>();
+		
+		@Override
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append(data).append(" : ");
+			for(Node n : incoming ) {
+				sb.append(n.data).append(" ");
+			}
+			return sb.toString();
+		}
+		
+		@Override
+		public boolean equals(Object obj) {
+			return data == ((Node)obj).data;
+		}
+		
+	}
+
+
+
+	private static Object topologicalSort(ArrayList<Character>[] supp) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public static void scan(Class<?> cl, String path, Consumer<Scanner> consumer) {
