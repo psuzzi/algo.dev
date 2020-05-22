@@ -2,9 +2,10 @@ package kickstart20.rc.p2;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -30,16 +31,9 @@ public class Solution {
 	}
 
 	private static void solve(char[][] wall) {
-		Set<Character> set = new HashSet<>();
 		
 		int rl = wall.length;
 		int cl = wall[0].length;
-		// get charset
-		for( int r=0; r<rl; r++) {
-			for(int c=0; c<cl; c++) {
-				set.add(wall[r][c]);
-			}
-		}
 		
 		// map
 		Map<Character, Node> map = new HashMap<>();
@@ -50,8 +44,6 @@ public class Solution {
 			for(int c=0; c<cl; c++) {
 				char ch = wall[r][c];
 				map.computeIfAbsent(ch, k -> new Node(k) );
-				set.add(ch);
-				
 				if(r==rl-1) {
 					supp[c] = ""+ch;
 				} else {
@@ -64,12 +56,24 @@ public class Solution {
 		
 		Stack<Character> stack = new Stack<>();
 		
+		Set<Node> visited = new  HashSet<>();
+		Set<Node> marked = new  HashSet<>();
+		
+		for(Node n : map.values()) {
+			if(hasCycle(n, marked, visited)) {
+				System.out.println("-1");
+				return;
+			}
+		}
+		
+		visited.clear();
 		// topological sort
 		for(Node n : map.values()) {
 //			System.out.printf("%n%s%n", n);
-			if(!n.visited)
-				topSort(n, stack);
+			if(!visited.contains(n))
+				topSort(n, visited, stack);
 		}
+		
 
 		String out = "";
 		while(!stack.isEmpty())
@@ -79,28 +83,39 @@ public class Solution {
 //		System.out.printf("%s%n", Arrays.asList(supp));
 	}
 
-	private static void topSort(Node n, Stack<Character> stack) {
-		n.visited = true;
+	private static void topSort(Node n, Set<Node> visited, Stack<Character> stack) {
+		visited.add(n);
 		for(Node cn : n.incoming) {
-			if(!cn.visited) {
-				topSort(cn, stack);
-			}
+			if(!visited.contains(cn)) {
+				topSort(cn, visited, stack);
+			} 
 		}
 		stack.push(n.data);
 	}
 	
-	private static boolean isCyclic() {
-		
+	private static boolean hasCycle(Node n, Set<Node> marked, Set<Node> visited) {
+		marked.add(n);
+		for(Node cn : n.incoming) {
+			if(marked.contains(cn))
+				return true;
+			else if( !visited.contains(cn) && hasCycle(cn, marked, visited))
+				return true;
+		}
+		marked.remove(n);
+		return false;
 	}
+	
 	
 
 	static class Node{
 		
+
 		public Node(char ch) {
 			this.data = ch;
 		}
 		char data;
-		boolean visited = false;
+		boolean marked = false;
+		public boolean visited = false;
 		Set<Node> incoming = new HashSet<>();
 		
 		@Override

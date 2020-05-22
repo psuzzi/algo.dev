@@ -1,19 +1,17 @@
 = Kickstart RB P1 - Countdown
 
-Description: https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003380d2
+There is an array of N integers, i.e. `1 2 3 7 9 3 2 1 8 3 2 1`. Tell how many k-conuntdown are in there. 
+For instance, with the array below, and k=3, we see two 3-countdowm, in the form `3 2 1 `.
 
+Description: https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003380d2
 
 == Solution 
 
-Idea: loop backward through the array. 
-The idea is to simulate the celebrity path, and then, for each step Si determine the https://en.wikipedia.org/wiki/Taxicab_geometry[Manhattan distance] starting from your position. If you can reach such point by the time the celebrity arrives there, you meet the celebrity.
-
-In this case, max(your-time-to-Si, celeb-time-to-Si) is one of the ways to reach the celebrity. To solve the problem, you need to select the minimum of the above. 
+Loop the array for an element = `k`. When found, 
 
 ----
 count = 0
 for i=ns.len-1 to 0
-	 
 ----
 
 
@@ -23,7 +21,4 @@ See my implementation in link:Solution.java[Java]
 
 See also
 
-* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/UmFmYmlsbA[Rafbil] (#1) impl in C++14
-* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/Q2htZWwuVG9sc3RpeQ[Chmel.Tolstiy] (#9) impl in Python 3
-* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/aWFrb3ZsZXYuemFraGFy[iakovlev.zakhar] (#14) impl in Java 8
-
+* References

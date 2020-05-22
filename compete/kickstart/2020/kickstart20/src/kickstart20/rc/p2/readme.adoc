@@ -1,5 +1,18 @@
 = Kickstart 2020 RC P2 - Stable Wall
 
+There is a 2D array of characters representing a wall built sequentially with different polynomios (set of bricks of different shapes).
+The wall is stable if it can be built sequentially, by adding polynomios, such that each polynomio is always supported. 
+
+For instance, the example below is stable, as the bricks can be put in the following order: `Z, O, A, M` 
+
+----
+ZOAAMM
+ZOAOMM
+ZOOOOM
+ZZZZOM
+----
+
+Given a set of walls, determine if they are stable. If so, return an order in which you can build the wall. Otherwise, return "-1".
 
 
 Description: https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb
@@ -7,9 +20,51 @@ Description: https://codingcompetitions.withgoogle.com/kickstart/round/000000000
 
 == Solution 
 
-----
+we can scan the wall by columns, bottom up, and then build a graph representing the support between blocks.
+
+For instance, from the sample wall, we extract `O -> Z` and `A -> O -> Z`
+
+As a result, we get a directed graph. If the graph has cycles, the wall is not stable. 
+If the graph is acyclic, we compute the topological order by running a reverse post-order DFS traversal.
+
+For instance, in the example, we have an acyclic graph where a possible valid order is `Z, O, A, M`
 
 ----
+solve(char[][] wall)
+	rlen = wall.length
+	clen = wall[0].len
+	graph = ()
+	for r=1 to rlen-1
+		for c=0 to clen
+			if wall[r][c] != wall[r+1][c]
+				graph.addEdge(wall[r][c], wall[r+1][c])
+	if hasCycle(graph)
+		return "-1"
+	return topologicalOrder(graph)	
+----
+
+To detect if the graph is cyclic, we can perform a DFS
+
+----
+has_cycle(graph)
+	marked=[]
+	visited=[]
+	for node in graph
+		if has_cycle(node, marked, visited)
+			return true
+
+has_cycle(node, marked, visited)
+	marked[node] = true
+	for child in node.adjacent
+		if marked[child]
+			return true // cycle detected
+		else if !visited[child] && hash_cycle(child, marked, visited)
+			return true;		
+	return false
+----
+
+To extract a topological order, we can explore the graph with a DFS in post-order, and return the reversed orders
+
 
 
 == Impl
