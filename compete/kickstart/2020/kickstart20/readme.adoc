@@ -1,7 +1,7 @@
 = Google KickStart 2020 round C
 
-* link:src/kickstart20/rc/p1[Countdown]: DESCRIPTION
-* link:src/kickstart20/rc/p1[Countdown]: DESCRIPTION
+* link:src/kickstart20/rc/p1[Countdown]: Search `k, k-1, .., 1` sequences in array
+* link:src/kickstart20/rc/p2[Stable Wall]: 2D Array to Graph, then find cycles or topological order 
 * link:p2[PROBLEM_NAME]: DESCRIPTION
 * link:p3[PROBLEM_NAME]: DESCRIPTION
 * link:p4[PROBLEM_NAME]: DESCRIPTION

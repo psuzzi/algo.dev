@@ -1,9 +1,11 @@
 = Kickstart 2020 RC P2 - Stable Wall
 
-There is a 2D array of characters representing a wall built sequentially with different polynomios (set of bricks of different shapes).
-The wall is stable if it can be built sequentially, by adding polynomios, such that each polynomio is always supported. 
+A 2D array represents a wall made of sets of bricks of different shapes called polynomios.
+A wall is stable if it can be built by adding polynomios sequentially, such that each polynomio is always supported.
 
-For instance, the example below is stable, as the bricks can be put in the following order: `Z, O, A, M` 
+Given a set of walls, determine if they are stable. If so, return an order in which you can build the wall. Otherwise, return "-1".
+
+For example, the wall below is stable, and it can be built by adding, in order, the polynomios: `Z, O, A, M` 
 
 ----
 ZOAAMM
@@ -12,38 +14,39 @@ ZOOOOM
 ZZZZOM
 ----
 
-Given a set of walls, determine if they are stable. If so, return an order in which you can build the wall. Otherwise, return "-1".
-
 
 Description: https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff43/00000000003379bb
 
 
-== Solution 
+== Solution
 
-we can scan the wall by columns, bottom up, and then build a graph representing the support between blocks.
+Idea: we scan the wall by column and we build a graph representing the polynomios and their chain of supports.
+Id the graph has cycles, the wall is unstable. Otherwise, the building order corresponds to the graph's topological order. 
 
-For instance, from the sample wall, we extract `O -> Z` and `A -> O -> Z`
+For instance, from the all in the example, build a directed graph with '`Z, O, A, M` vertices and `O -> Z`, `A -> O` edges.
+The corresponding graph has no cycles, and a possible topological order is `Z, O, A, M`
 
-As a result, we get a directed graph. If the graph has cycles, the wall is not stable. 
-If the graph is acyclic, we compute the topological order by running a reverse post-order DFS traversal.
-
-For instance, in the example, we have an acyclic graph where a possible valid order is `Z, O, A, M`
+Algorithm
 
 ----
-solve(char[][] wall)
-	rlen = wall.length
+solve( char[][] wall )
+
+	graph = map<char, set<char>>
+	rlen = wall.len
 	clen = wall[0].len
-	graph = ()
-	for r=1 to rlen-1
-		for c=0 to clen
-			if wall[r][c] != wall[r+1][c]
-				graph.addEdge(wall[r][c], wall[r+1][c])
-	if hasCycle(graph)
+	for r=0 to rlen-1
+		for c=0 to clen-1
+			curr = wall[r][c]
+			if map[ curr ] == null
+				map[ curr ] = new set<char>
+			if( r+1 < rlen && curr != wall[r+1][c])
+				map[curr].add( wall[r+1][c] )
+	if has_cycle(graph)
 		return "-1"
-	return topologicalOrder(graph)	
+	return topological_order(graph)
 ----
 
-To detect if the graph is cyclic, we can perform a DFS
+We detect cycles in the graph by running a DFS on all nodes and checking if any node is being visited twice within the same recursion stack.
 
 ----
 has_cycle(graph)
@@ -52,6 +55,7 @@ has_cycle(graph)
 	for node in graph
 		if has_cycle(node, marked, visited)
 			return true
+	return false
 
 has_cycle(node, marked, visited)
 	marked[node] = true
@@ -63,7 +67,8 @@ has_cycle(node, marked, visited)
 	return false
 ----
 
-To extract a topological order, we can explore the graph with a DFS in post-order, and return the reversed orders
+If not acyclic, we have a DAG, hence we can compute the topological order by running a reverse post-order DFS traversal. 
+
 
 
 
@@ -71,9 +76,16 @@ To extract a topological order, we can explore the graph with a DFS in post-orde
 
 See my implementation in link:Solution.java[Java]
 
-See also
+See other's implementation
 
-* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/UmFmYmlsbA[Rafbil] (#1) impl in C++14
-* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/Q2htZWwuVG9sc3RpeQ[Chmel.Tolstiy] (#9) impl in Python 3
-* https://codingcompetitions.withgoogle.com/codejam/submissions/000000000019fef4/aWFrb3ZsZXYuemFraGFy[iakovlev.zakhar] (#14) impl in Java 8
+* C++:
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/dG13aWxsaWFtbGluMTY4[tmwilliamlin168] (#1), 
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/RXJyaWNodG8[errichto] (#3) 
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/SGVsdGlvbg[Heltion] (#4) 
+* Java: 
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/ZWF0bW9yZQ[eatmore] (#2),
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/a2hva2hhcm5pa3Vuajg[khokharnikunj8] (#36),
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/SmVlbF9WYWlzaG5hdg[Jeel_Vaishnav] (#42)
+* Python 3: 
+https://codingcompetitions.withgoogle.com/kickstart/submissions/000000000019ff43/ei5zaGk[z.shi] (#27)
 
