@@ -1,0 +1,9 @@
+= Algorithms Study 2
+
+== Idea
+
+Collections of algorithmic problems solved and commented
+
+=== W1 - Simple Problems:
+
+- link:src/w1/p01[Longest continuous increasing subsequence]
