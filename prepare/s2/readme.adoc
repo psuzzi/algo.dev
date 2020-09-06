@@ -2,8 +2,8 @@
 
 == Idea
 
-Collections of algorithmic problems solved and commented
+Collections of algorithms solved 
 
-=== W1 - Simple Problems:
+=== W1 - Sequences:
 
-- link:src/w1/p01[Longest continuous increasing subsequence]
+- link:src/w1/p01[Two Sum]
