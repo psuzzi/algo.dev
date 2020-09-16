@@ -1,9 +1,7 @@
 =  Longest Repeating Character Replacement
 
 Given a string s that consists of only uppercase English letters, you can perform at most k operations on that string.
-
 In one operation, you can choose any character of the string and change it to any other uppercase English character.
-
 Find the length of the longest sub-string containing all repeating letters you can get after performing the above operations.
 
 Note:
@@ -22,13 +20,24 @@ Replace the two 'A's with two 'B's or vice versa.
 
 Description: https://leetcode.com/problems/longest-repeating-character-replacement/
 
+== Naive solution, Brute force
+
+We scan the array from the index 0 to right until the characters 
+
 
 == Solution, Sliding Windos
 
-We keep an array of 26 integers to count k, for each character
-We iterate on all the input characters using a sliding window
-Initially, the sliding window expands right, until we get to the limit of `k` operations
-Then, we start moving the left side of the window
+We scan the array with a sliding window, which can expand right or shrink left. 
+
+We use a data structure to count the occurrences of the 26 characters in the current window
+
+We use an array of 26 integers to count the characters in the current window
+
+Initially, the sliding window expands to the right, until we reach the limit of `k` operations
+Then, we start moving the left side of the window.
+
+
+
 
 
 
