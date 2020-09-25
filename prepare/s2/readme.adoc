@@ -8,3 +8,4 @@ Collections of algorithms solved
 
 - link:src/w1/p01[Two Sum]
 - link:src/w1/p02[Merge two sorted lists], splicing together linked lists
+- link:src/w1/p02[Remove duplicates from sorted array] in places

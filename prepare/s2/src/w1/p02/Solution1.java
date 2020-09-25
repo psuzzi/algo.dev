@@ -2,15 +2,9 @@ package w1.p02;
 
 /**
  * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
  */
-class Solution {
+
+class Solution1 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         
         if(l1==null && l2==null)
