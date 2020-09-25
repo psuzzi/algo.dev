@@ -1,0 +1,29 @@
+= Merge two sorted lists
+
+
+Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
+
+Example
+
+Input: 1->2->4, 1->3->4
+Output: 1->1->2->3->4->4
+
+
+- https://leetcode.com/problems/merge-two-sorted-lists/
+
+== Idea
+
+Scan the two lists node by node
+We can use a sliding window to represent the longest continuous increasing subsequence. 
+
+== Impl
+
+See 
+* iterative implementation in link:Solution.java[Java]
+* recursive implementation in link:Solution.java[Java]
+
+
+== references
+
+- https://www.youtube.com/watch?v=jSvoE-_Yhs4
+
