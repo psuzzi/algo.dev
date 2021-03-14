@@ -1,7 +1,9 @@
-= Google KickStart 2020 round C
+= Archive: https://codingcompetitions.withgoogle.com/kickstart/archive/2020[KickStart 2020] 
 
-* link:src/kickstart20/rc/p1[Countdown]: Search `k, k-1, .., 1` sequences in array
-* link:src/kickstart20/rc/p2[Stable Wall]: 2D Array to Graph, then find cycles or topological order 
+== round C
+
+* link:src/ks20/rc/p1[Countdown]: Search `k, k-1, .., 1` sequences in array
+* link:src/ks20/rc/p2[Stable Wall]: 2D Array to Graph, then find cycles or topological order 
 * link:p2[PROBLEM_NAME]: DESCRIPTION
 * link:p3[PROBLEM_NAME]: DESCRIPTION
 * link:p4[PROBLEM_NAME]: DESCRIPTION

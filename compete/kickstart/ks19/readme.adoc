@@ -1,0 +1,19 @@
+= https://codingcompetitions.withgoogle.com/kickstart/archive/2019[Kick start 2019]
+
+Archive: https://codingcompetitions.withgoogle.com/kickstart/archive/2019
+
+== My Rounds:
+
+- link:src/ks19/r0p[Practice Round]
+- Round A: 2746
+- Round B: 1369
+- Round C: 1477
+- Round D
+- Round E
+- Round F
+- Round G
+- Round H
+
+
+
+
