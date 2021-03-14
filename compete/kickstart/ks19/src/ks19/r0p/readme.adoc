@@ -2,6 +2,6 @@
 
 https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051060
 
-* Number Guessing
-* Mural
+* link:p1[Number Guessing]: classic binary search, interactive
+* link:p2[Mural]: max over a rolling window
 * Kickstart Alarm

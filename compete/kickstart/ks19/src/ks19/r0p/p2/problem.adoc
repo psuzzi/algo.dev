@@ -1,0 +1,14 @@
+= Mural
+
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051060/0000000000058b89
+
+- contiguous array of N positive values
+- each day the wall is destroyed at one of the two ends
+- each day one section of the wall is painted
+- maximize the value
+
+
+-> max of the sum over a rolling window of length (N+1)/2
+
+References
+- https://logicatcore.github.io/2020-09-10-Google-kickstart-Mural-coding-question-2018-round-H/
