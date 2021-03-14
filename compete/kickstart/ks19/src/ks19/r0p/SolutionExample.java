@@ -1,4 +1,4 @@
-package ks19.r0;
+package ks19.r0p;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

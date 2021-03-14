@@ -1,4 +1,4 @@
-package ks19.r0;
+package ks19.r0p.p1;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @see https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051060/00000000000588f4
  *
  */
-public class Solution1 {
+public class Solution {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -40,3 +40,4 @@ public class Solution1 {
 	}
 
 }
+
