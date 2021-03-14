@@ -1,0 +1,7 @@
+= Number Guessing, interactive
+
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051060/00000000000588f4
+
+We have 30 tries to find a number in an interval [0,10e9] (test set 2)
+
+Since log2 (10^9) < 30, the guess is feasible
