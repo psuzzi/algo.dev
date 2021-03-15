@@ -1,0 +1,14 @@
+= Kickstart Alarm
+
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000051060/0000000000058a56
+
+K wake up alarms -> rings K times
+
+programmed with A1, A2, //, An
+
+power_i 
+- generate contiguous subarrays of the parameter array
+- sum the i-th exp power of all contiguous subarrays
+
+i-th exp power ofsubarray A~j~, A~j+1~, ..., A~k~ is defined as A~j~ × 1^i^ + A~j+1~ × 2^i^ + A~j+2~ × 3^i^ + ... + A~k~ × (k-j+1)^i^.
+
