@@ -3,4 +3,4 @@
 
 == Preparation
 
-* Go through a number of unsolved problems in ks19 and 20
+* Go through a number of unsolved problems in ks19 and 20 ?
