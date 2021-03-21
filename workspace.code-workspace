@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "compete\\kickstart\\ks19"
+		},
+		{
+			"path": "compete\\kickstart\\ks20"
 		}
 	],
 	"settings": {}
