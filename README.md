@@ -11,6 +11,7 @@ others:
 * [Kickstart 2018](compete/kickstart/ks18)
 * [Kickstart 2019](compete/kickstart/ks19)
 * [Kickstart 2020](compete/kickstart/ks20)
+* [Kickstart 2021](compete/kickstart/ks21)
 
 Some useful resources
 
