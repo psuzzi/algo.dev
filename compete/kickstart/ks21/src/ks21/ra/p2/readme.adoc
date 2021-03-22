@@ -1,0 +1,20 @@
+= L Shaped Plots, KS 21 A 1
+
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068c509
+
+== Problem
+
+Scan a 2D "1 or 0" array to find all possible L-shaped plots.
+For each L the ratio between the longer and the shorter segment is 2:1
+Count the number of L.
+
+== Idea
+
+* scan each element of the array
+* determine if an element is an endpoint, where the two segments intersect
+* for each endpoint there are four cases of how the L is orientated
+* for all these four cases, count the number of Ls based on the length of the legs
+
+== References
+
+- https://youtu.be/QvFWZ4GqBAU?t=1401

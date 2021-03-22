@@ -1,0 +1,13 @@
+= K-Godness string
+
+https://codingcompetitions.withgoogle.com/kickstart/round/0000000000436140/000000000068cca3
+
+
+Given a string, it goodness is given by how many opposing pairs of characters are unequal. 
+Given a number K, tell how many changes are needed to get from the String goodness to the number K. 
+
+This is a simple count of values.
+
+== References
+
+- https://youtu.be/QvFWZ4GqBAU?t=1311

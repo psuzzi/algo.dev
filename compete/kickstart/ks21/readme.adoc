@@ -1,6 +1,8 @@
 = Kikckstart 21
 
 
-== Preparation
+== Round A
 
-* Go through a number of unsolved problems in ks19 and 20 ?
+* link:src/ks21/ra/p1[K-Goodness String]: simple logic reasoning and counting
+* link:src/ks21/ra/p2[L Shaped Plots]: Counting the number of Ls in a 2D Array
+
