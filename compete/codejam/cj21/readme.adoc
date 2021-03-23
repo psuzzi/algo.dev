@@ -1,0 +1,27 @@
+= Codejam 2021
+
+List of CodeJam 2021 problems I attempted. 
+For each one there is explaination and solution.
+
+* Qualification
+** TODO: add links
+
+
+
+All the problems are here: https://codingcompetitions.withgoogle.com/codejam/archive/[Google Codejam Archive]
+
+== Note
+
+Never publish information about the problems while a round is still open. 
+You can get disqualified from the competition if someone finds and copies your code.
+
+
+== References
+
+Other references and sources
+
+* errichto videos https://www.youtube.com/watch?v=KbXk_-M0kw8[A B C Explained], https://www.youtube.com/watch?v=AK45-rrnYhY[Interactive Problem D]
+* https://dev.to/serpent7776/google-code-jam-2020-qualifications-a05
+* https://github.com/salvois/codejam
+* https://codeforces.com/blog/entry/71545[Google Code Jam 2020 - Codeforces]
+* https://groups.google.com/d/forum/google-code/join[Google Code Jam - Google Groups]
