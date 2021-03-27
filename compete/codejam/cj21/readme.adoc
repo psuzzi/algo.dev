@@ -1,11 +1,11 @@
 = Codejam 2021
 
-List of CodeJam 2021 problems I attempted. 
-For each one there is explaination and solution.
+List of CodeJam 2021 problems I attempted with solutions 
 
-* Qualification
-** TODO: add links
-
+* link:https://codingcompetitions.withgoogle.com/codejam/round/000000000043580a[Qualification]
+** link:src/cj21/r0/p1[Q P1 - Reversort] implement and evaluate cost of a sorting algorithm
+** link:src/cj21/r0/p2[Q P1 - Moons and Umbrellas] determine min cost of an array based composition
+** link:src/cj21/r0/p3[Q P1 - Reversort Engineering] generate input matching desired output for sorting 
 
 
 All the problems are here: https://codingcompetitions.withgoogle.com/codejam/archive/[Google Codejam Archive]

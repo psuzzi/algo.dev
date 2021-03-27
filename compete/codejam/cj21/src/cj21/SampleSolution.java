@@ -9,7 +9,7 @@ public class SampleSolution {
 
 	public static void main(String[] args) {
 		
-		try(Scanner in = new Scanner(System.in)){
+		try(Scanner in = new Scanner(System.in)){	
 			int t = in.nextInt();
 			for( int it = 1; it<=t; it++ ) {
 				out.printf("Case #%s%n", it);

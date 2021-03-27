@@ -1,0 +1,23 @@
+= CJ2021 Qual P1 - Reversort
+
+https://codingcompetitions.withgoogle.com/codejam/round/000000000043580a/00000000006d1145
+
+
+a mural consisting of a row of moons"C" and umbrellas "J"
+copyright on CJ and JC.
+- each time CJ appears in the mural, Cody-Jamal must pay X
+- each time JC appears in the mural, he must pay Y.
+
+
+empty spaces he still has could be filled strategically, to MINIMIZE the copyright expenses.
+
+For example, given CJ?CC? current state of the mural, he could finish the mural as with the costs on 2nd column
+- CJCCCC	X+Y one CJ + one JC
+- CJCCCJ	2X+Y two CJ one JC
+- CJJCCC	X+Y
+- CJJCCJ	2X+Y
+
+
+
+Given the costs X and Y and a string representing the current state of the mural
+how much does Cody-Jamal need to pay in copyrights if he finishes his mural in a way that MINIMIZE that cost?
