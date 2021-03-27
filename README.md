@@ -4,10 +4,12 @@ Algorithms for development
 current: 
 * [Algorithms Study 1](prepare/s1) : List of algorithmic problems explained and solved, ordered by increasing difficulty from the basics to the advanced ones.
 * [Algorithms Study 2](prepare/s2) : List of algorithmic problems solved with minumum explanation, in noparticular order.
-* [Codejam 2020](compete/codejam/cj20) : List of algorithmic problems for top competitive programmers
+* [Codejam 2021](compete/codejam/cj21) : List of algorithmic problems for top competitive programmers
 * [Kickstart 2021](compete/kickstart/ks21) : List of algorithmic problems for top competitive programmers
 
-others:
+All:
+* [Codejam 2020](compete/codejam/cj20)
+* [Codejam 2021](compete/codejam/cj21)
 * [Kickstart 2018](compete/kickstart/ks18)
 * [Kickstart 2019](compete/kickstart/ks19)
 * [Kickstart 2020](compete/kickstart/ks20)
